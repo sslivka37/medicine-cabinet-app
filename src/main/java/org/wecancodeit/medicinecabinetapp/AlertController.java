@@ -1,5 +1,5 @@
 package org.wecancodeit.medicinecabinetapp;
 
-public class Medicine {
+public class AlertController {
 
 }

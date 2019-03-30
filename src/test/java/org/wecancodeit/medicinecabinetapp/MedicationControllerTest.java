@@ -1,5 +1,5 @@
 package org.wecancodeit.medicinecabinetapp;
 
-public class MedicineControllerMockMVCTest {
+public class MedicationControllerTest {
 
 }
