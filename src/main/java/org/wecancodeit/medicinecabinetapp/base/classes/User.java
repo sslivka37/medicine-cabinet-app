@@ -1,6 +1,7 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
 import javax.annotation.Generated;
+<<<<<<< HEAD
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,6 +11,15 @@ public class User {
 	
 	@Id
 	@GeneratedValue
+=======
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+public class User {
+	
+	@Id
+	@Generated
+>>>>>>> removed curly braces
 	private long id;
 	
 	private String userName;

@@ -1,5 +1,6 @@
 package org.wecancodeit.medicinecabinetapp.controllers;
 
+<<<<<<< HEAD
 import java.util.Optional;
 
 import javax.annotation.Resource;
@@ -34,3 +35,8 @@ public class UserController {
 	
 }
 
+=======
+public class UserController {
+
+}
+>>>>>>> removed curly braces

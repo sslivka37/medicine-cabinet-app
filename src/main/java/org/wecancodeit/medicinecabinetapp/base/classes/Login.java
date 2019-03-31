@@ -1,8 +1,11 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+<<<<<<< HEAD
 import java.sql.SQLException;
 
 
+=======
+>>>>>>> removed curly braces
 public class Login {
 	
 	private String username;
