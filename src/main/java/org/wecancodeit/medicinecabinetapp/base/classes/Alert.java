@@ -22,6 +22,8 @@ public class Alert {
 		
 	}
 	
+	//loaded constructor?
+	
 	public long getId() {
 		return id;
 	}
