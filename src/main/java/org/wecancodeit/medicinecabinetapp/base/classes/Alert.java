@@ -1,4 +1,4 @@
-package org.wecancodeit.medicinecabinetapp;
+package org.wecancodeit.medicinecabinetapp.base.classes;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -21,6 +21,16 @@ public class Alert {
 	public Alert() {
 		
 	}
+	
+	public long getId() {
+		return id;
+	}
+
+	public boolean isTaken() {
+		return taken;
+	}
+	
+	
 	
 
 

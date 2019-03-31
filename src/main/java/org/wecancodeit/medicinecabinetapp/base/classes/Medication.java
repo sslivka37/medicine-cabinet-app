@@ -1,4 +1,4 @@
-package org.wecancodeit.medicinecabinetapp;
+package org.wecancodeit.medicinecabinetapp.base.classes;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -35,7 +35,9 @@ public class Medication {
 		this.count = count;
 	}
 	
-	
+	public long getId() {
+		return id;
+	}
 	
 	public String getMedicationName() {
 		return medicationName;
@@ -52,6 +54,10 @@ public class Medication {
 	
 	public String getMedicationType() {
 		return medicationType;
+	}
+	
+	public int getFrequency() {
+		return frequency;
 	}
 	
 	public int getCount() {

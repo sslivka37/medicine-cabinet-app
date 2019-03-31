@@ -1,4 +1,4 @@
-package org.wecancodeit.medicinecabinetapp;
+package org.wecancodeit.medicinecabinetapp.base.classes;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,6 +16,10 @@ public class Allergy {
 	
 	public Allergy(String allergyName) {
 		this.allergyName = allergyName;
+	}
+	
+	public long getId() {
+		return id;
 	}
 	
 	public String getAllergyName() {

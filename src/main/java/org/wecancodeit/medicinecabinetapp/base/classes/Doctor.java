@@ -1,4 +1,4 @@
-package org.wecancodeit.medicinecabinetapp;
+package org.wecancodeit.medicinecabinetapp.base.classes;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,6 +20,10 @@ public class Doctor {
 	public Doctor(String doctorName, String doctorPhone) {
 		this.doctorName = doctorName;
 		this.doctorPhone = doctorPhone;
+	}
+	
+	public long getId() {
+		return id;
 	}
 	
 	
