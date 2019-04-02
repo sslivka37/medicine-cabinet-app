@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-
+import java.time.LocalDateTime;
 
 
 
@@ -22,29 +22,26 @@ public class Alert {
 	
 	private String name;	
 	private boolean taken;
+	private LocalDateTime timeToSendAlert;
 	
 	@ManyToMany(mappedBy = "alerts")
 	private Collection <Medication> medications;
 	
 	
-	//user id - many alerts to one user
-	//alert Time
-	//alert Date
-	//alert Type
+	//should alerts be mapped to user also or just medications?
+	
 	
 	public Alert() {
 		
 	}
 	
 	
-	public Alert(String name, boolean taken) {
+	public Alert(String name, boolean taken, LocalDateTime timeToSendAlert) {
 		this.name = name;
 		this.taken = taken;
+		this.timeToSendAlert = timeToSendAlert;
 		
-		
-		
-		
-		
+				
 	}
 	
 	public long getId() {
@@ -57,6 +54,10 @@ public class Alert {
 
 	public boolean isTaken() {
 		return taken;
+	}
+	
+	public Object getTimeToSendAlert() {
+		return timeToSendAlert;
 	}
 
 	public Collection <Medication> getMedications() {		

@@ -1,4 +1,4 @@
-package org.wecancodeit.medicinecabinetapp;
+package org.wecancodeit.medicinecabinetapp.base.classes;
 
 import java.util.Optional;
 
@@ -41,7 +41,7 @@ public class AlertJPAMappingsTest {
 	
 	@Test
 	public void should_Save_And_Load_Alert(){
-		Alert alert = alertRepo.save(new Alert("alert", false));
+		Alert alert = alertRepo.save(new Alert("alert", false, null));
 		long alertId = alert.getId();
 		
 		entityManager.flush();
@@ -55,7 +55,7 @@ public class AlertJPAMappingsTest {
 	
 	@Test
 	public void should_Generate_Alert_Id() {
-		Alert alert = alertRepo.save(new Alert("alert", false));
+		Alert alert = alertRepo.save(new Alert("alert", false, null));
 		long alertId = alert.getId();
 		
 		entityManager.flush();
@@ -67,8 +67,8 @@ public class AlertJPAMappingsTest {
 	
 	@Test
 	public void should_Establish_Alert_To_Medication_Relationship() {
-		Alert alert1 = alertRepo.save(new Alert("alert1", false));
-		Alert alert2 = alertRepo.save(new Alert("alert 2", false));
+		Alert alert1 = alertRepo.save(new Alert("alert1", false, null));
+		Alert alert2 = alertRepo.save(new Alert("alert 2", false, null));
 		
 		Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", 0, 0, alert1, alert2));
 		long medicationId = medication.getId();
