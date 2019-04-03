@@ -22,6 +22,7 @@ public class Alert {
 	
 	private String name;	
 	private boolean taken;
+	
 	private LocalDateTime timeToSendAlert;
 	
 	@ManyToMany(mappedBy = "alerts")
@@ -31,7 +32,7 @@ public class Alert {
 	//should alerts be mapped to user also or just medications?
 	
 	
-	public Alert() {
+	 public Alert (){
 		
 	}
 	
@@ -40,6 +41,7 @@ public class Alert {
 		this.name = name;
 		this.taken = taken;
 		this.timeToSendAlert = timeToSendAlert;
+		
 		
 				
 	}

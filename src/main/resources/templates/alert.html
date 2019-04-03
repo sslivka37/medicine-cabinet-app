@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Alert</title>
+	
+</head>
+<body>
+	<h1>Alert</h1>
+	
+	
+	<div th:each= "alert: ${alerts}">		
+		 
+		<p th:text = "${alert.name}"></p>
+		<p th:text = "${alert.timeToSendAlert}"></p>
+		
+				
+	</div>		
+		
+
+</body>
+</html>
