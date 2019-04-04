@@ -1,5 +1,8 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+import java.sql.SQLException;
+
+
 public class Login {
 	
 	private String username;

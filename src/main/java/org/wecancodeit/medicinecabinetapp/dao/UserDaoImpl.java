@@ -1,4 +1,4 @@
-package org.wecancodeit.medicinecabinetapp.repositories;
+package org.wecancodeit.medicinecabinetapp.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,17 +10,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.wecancodeit.medicinecabinetapp.base.classes.Login;
-import org.wecancodeit.medicinecabinetapp.base.classes.User;
+import org.wecancodeit.medicinecabinetapp.base.classes .User;
 
-public class UserRepositoryImpl {
-
+public class UserDaoImpl {
+	
 	@Autowired
 	  DataSource datasource;
 	  @Autowired
 	  JdbcTemplate jdbcTemplate;
 	  public void register(User user) {
 	    String sql = "insert into users values(?,?,?,?,?,?,?)";
-	    jdbcTemplate.update(sql, new Object[] { user.getUserName(), user.getUserPassword(), user.getFirstName(),
+	    jdbcTemplate.update(sql, new Object[] { user.getFirstName(), user.getUserPassword(), user.getFirstName(),
 	    user.getLastName(), user.getUserEmail(),user.getUserPhone() });
 	    }
 	    public User validateUser(Login login) {
@@ -29,7 +29,6 @@ public class UserRepositoryImpl {
 	    List<User> users = jdbcTemplate.query(sql, new UserMapper());
 	    return users.size() > 0 ? users.get(0) : null;
 	    }
-	
 	  }
 	  class UserMapper implements RowMapper<User> {
 	  public User mapRow(ResultSet rs, int arg1) throws SQLException {
@@ -44,4 +43,5 @@ public class UserRepositoryImpl {
 	  }
 	}
 	
+
 
