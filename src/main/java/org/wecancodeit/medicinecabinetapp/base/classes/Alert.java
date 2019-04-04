@@ -22,6 +22,8 @@ public class Alert {
 	
 	private String name;	
 	private boolean taken;
+	private int dosageUnits;
+	private String dosageType;
 	
 	private LocalDateTime timeToSendAlert;
 	
@@ -37,10 +39,12 @@ public class Alert {
 	}
 	
 	
-	public Alert(String name, boolean taken, LocalDateTime timeToSendAlert) {
+	public Alert(String name, boolean taken, int dosageUnits, String dosageType, LocalDateTime timeToSendAlert) {
 		this.name = name;
 		this.taken = taken;
 		this.timeToSendAlert = timeToSendAlert;
+		this.dosageUnits = dosageUnits;
+		this.dosageType = dosageType;
 		
 		
 				
@@ -56,6 +60,14 @@ public class Alert {
 
 	public boolean isTaken() {
 		return taken;
+	}
+	
+	public int getDosageUnits() {
+		return dosageUnits;
+	}
+	
+	public String getDosageType() {
+		return dosageType;
 	}
 	
 	public Object getTimeToSendAlert() {

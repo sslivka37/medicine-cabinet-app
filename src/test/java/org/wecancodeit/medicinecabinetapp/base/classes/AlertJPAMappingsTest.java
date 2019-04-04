@@ -41,7 +41,7 @@ public class AlertJPAMappingsTest {
 	
 	@Test
 	public void should_Save_And_Load_Alert(){
-		Alert alert = alertRepo.save(new Alert("alert", false, null));
+		Alert alert = alertRepo.save(new Alert("alert", false, 1, "pill", null));
 		long alertId = alert.getId();
 		
 		entityManager.flush();
@@ -55,7 +55,7 @@ public class AlertJPAMappingsTest {
 	
 	@Test
 	public void should_Generate_Alert_Id() {
-		Alert alert = alertRepo.save(new Alert("alert", false, null));
+		Alert alert = alertRepo.save(new Alert("alert", false, 1, "pill", null));
 		long alertId = alert.getId();
 		
 		entityManager.flush();
@@ -67,8 +67,8 @@ public class AlertJPAMappingsTest {
 	
 	@Test
 	public void should_Establish_Alert_To_Medication_Relationship() {
-		Alert alert1 = alertRepo.save(new Alert("alert", false, null));
-		Alert alert2 = alertRepo.save(new Alert("alert", false, null));
+		Alert alert1 = alertRepo.save(new Alert("alert", false, 1, "pill", null));
+		Alert alert2 = alertRepo.save(new Alert("alert", false, 1, "pill", null));
 		
 		Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", 0, 0, alert1, alert2));
 		long medicationId = medication.getId();
