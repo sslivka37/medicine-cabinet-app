@@ -1,8 +1,10 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class User {
 	
 	@Id
@@ -12,7 +14,7 @@ public class User {
 	private String userName;
 	private String userPassword;
 	private String userPhone;
-	//email id?
+
 	
 
 	
