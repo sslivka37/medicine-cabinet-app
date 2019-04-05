@@ -3,7 +3,10 @@ package org.wecancodeit.medicinecabinetapp.base.classes;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> development
 public class Medication {
 	
 	@Id
