@@ -21,7 +21,7 @@ public class Medication {
 	@GeneratedValue
 	private long id;
 	
-	@Lob
+	
 	private String medicationName;
 	private String medicationType;
 	
@@ -37,10 +37,14 @@ public class Medication {
     
     @ManyToOne
     private String user;
-    
+
     @OneToMany
     private Collection<Alert> alerts;
 
+    public Collection<Medication> availableMeds() {
+		return getMedicationName();
+	}
+    
 	private String alert;
     
 	//user id- many medications to one user
@@ -76,6 +80,8 @@ public class Medication {
 		return medicationName;
 	
 	}
+	
+	
 	
 	public String getDosageUnits() {
 		return dosageUnits;
