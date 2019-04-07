@@ -1,13 +1,12 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
 import javax.persistence.Entity;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class User {
-	
+public class Registration {
+
 	@Id
 	@GeneratedValue
 	private long id;
@@ -22,11 +21,11 @@ public class User {
 	
 
 	
-	public User () {
+	public Registration () {
 		
 	}
 	
-	public User(String userName, String firstName, String lastName, String userPassword, String userPhone, String userEmail) {
+	public Registration(String userName, String firstName, String lastName, String userPassword, String userPhone, String userEmail) {
 		this.userName = userName;
 		this.firstName=firstName;
 		this.lastName=lastName;
@@ -88,6 +87,3 @@ public class User {
 	
 
 }
-
-
-
