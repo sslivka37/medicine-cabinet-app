@@ -8,11 +8,9 @@ import java.util.List;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-
 
 
 public class Medication {
@@ -32,8 +30,8 @@ public class Medication {
 	private int count;
 	//medication Time?
 
-    @ManyToMany
-    private Collection<Pharmacy> pharmacies;
+    
+    private String pharmacy;
     
     @ManyToOne
     private String user;
@@ -41,7 +39,7 @@ public class Medication {
     @OneToMany
     private Collection<Alert> alerts;
 
-    public Collection<Medication> availableMeds() {
+    public String availableMeds() {
 		return getMedicationName();
 	}
     
@@ -57,7 +55,7 @@ public class Medication {
 	}
 	
 	public Medication(String medicationName, String dosageUnits, double dosageAmount, String medicationType, int frequency, int count, 
-			String user, String alert, Pharmacy...pharmacies) {
+			String user, String alert, String pharmacy) {
 		this.medicationName = medicationName;
 		this.dosageUnits = dosageUnits;
 		this.dosageAmount = dosageAmount;
@@ -66,7 +64,7 @@ public class Medication {
 		this.count = count;
 		this.user = user;
 		this.alert = alert;
-		this.pharmacies = new HashSet<>(Arrays.asList(pharmacies));		
+		this.pharmacy = pharmacy;		
 		
 		
 		List<Medication> medications = new ArrayList<Medication>();

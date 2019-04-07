@@ -38,9 +38,12 @@ public class JPAMappingsTest {
 	@Resource
 	private TestEntityManager entityManager;
 	
+	//String medicationName, String dosageUnits, double //dosageAmount, String medicationType, int frequency, int count, 
+	//String user, String alert, Pharmacy...pharmacies)
+	
 	@Test
 	public void shouldSaveAndLoadMeds() {
-		Medication medication = medicationRepo.save(new Medication("Zyrtec", "dosage units", 10.5, "allergy", 1, 30));
+		Medication medication = medicationRepo.save(new Medication("Zyrtec", "pill", 10.5, "allergy", 1, 30, "Renee", "10pm", "cvs"));
 		long medicationId = medication.getId();
 		
 		entityManager.flush();
@@ -54,7 +57,7 @@ public class JPAMappingsTest {
 	
 	@Test
 	public void shouldGenerateMedicationId() {
-		Medication medication = medicationRepo.save(new Medication("medication", null, 0, null, 0, 0, null, null, null));
+		Medication medication = medicationRepo.save(new Medication("Zyrtec", "pill", 10, "allergy", 1, 30, "Renee", "10", "Walgreens"));
 		long medicationId = medication.getId();
 		
 		entityManager.flush();
