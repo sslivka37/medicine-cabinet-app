@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title >All Medications</title>
+	
+</head>
+<body>	
+	<h1>List of All Medications</h1>
+	
+	
+	<div th:each="medication: ${medications}" >
+		<p><a th:href="@{/medication(id=${medication.id})}" th:text="${medication.medicationName}"></a></p>
+	</div>
+	
+	
+</body>
+</html>
