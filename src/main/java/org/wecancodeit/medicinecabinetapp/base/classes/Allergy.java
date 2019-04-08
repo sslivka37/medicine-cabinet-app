@@ -1,8 +1,11 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class Allergy {
 	
 	@Id

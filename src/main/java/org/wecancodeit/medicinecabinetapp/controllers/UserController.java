@@ -1,10 +1,10 @@
 package org.wecancodeit.medicinecabinetapp.controllers;
 
-<<<<<<< HEAD
+
 public class UserController {
 
 }
-=======
+
 import java.util.Optional;
 
 import javax.annotation.Resource;
@@ -39,4 +39,8 @@ public class UserController {
 	
 }
 
->>>>>>> adrienne
+
+public class UserController {
+
+}
+
