@@ -1,7 +1,7 @@
 package org.wecancodeit.medicinecabinetapp.controllers;
 
 
-public class AlertController {
+
 
 import java.util.Optional;
 

@@ -15,9 +15,7 @@ public class Pharmacy {
 	private String pharmacyName;
 	private String pharmacyAddress;
 	private String pharmacyPhone;
-	
-	//user id? Many pharmacies to one user
-	
+		
 	
 	public Pharmacy() {
 		
@@ -46,7 +44,6 @@ public class Pharmacy {
 		return pharmacyPhone;
 	}
 
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -68,6 +65,8 @@ public class Pharmacy {
 			return false;
 		return true;
 	}
+
+
 	
 	
 

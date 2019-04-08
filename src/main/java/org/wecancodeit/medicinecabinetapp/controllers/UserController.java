@@ -1,9 +1,7 @@
 package org.wecancodeit.medicinecabinetapp.controllers;
 
 
-public class UserController {
 
-}
 
 import java.util.Optional;
 
@@ -14,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.wecancodeit.medicinecabinetapp.base.classes.User;
+import org.wecancodeit.medicinecabinetapp.exceptions.UserNotFoundException;
 import org.wecancodeit.medicinecabinetapp.repositories.UserRepository;
 
 @Controller
@@ -40,7 +39,5 @@ public class UserController {
 }
 
 
-public class UserController {
 
-}
 

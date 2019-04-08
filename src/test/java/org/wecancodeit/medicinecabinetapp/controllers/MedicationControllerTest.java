@@ -1,7 +1,7 @@
 package org.wecancodeit.medicinecabinetapp.controllers;
 
 
-public class MedicationControllerTest {
+
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
