@@ -1,5 +1,6 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -45,6 +46,7 @@ public class Pharmacy {
 		return pharmacyPhone;
 	}
 
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -68,5 +70,6 @@ public class Pharmacy {
 	}
 	
 	
+
 
 }

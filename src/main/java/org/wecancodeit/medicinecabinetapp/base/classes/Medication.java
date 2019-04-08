@@ -1,5 +1,6 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
@@ -14,12 +15,14 @@ import java.time.LocalTime;
 
 
 @Entity
+
 public class Medication {
 	
 	@Id
 	@GeneratedValue
 	private long id;
 	
+
 	private String medicationName;
 	private String dosageUnits;
 	private double dosageAmount;
@@ -40,25 +43,29 @@ public class Medication {
 	
 		
 		//will have to work on relationships between med-pharm and med-doc
+
 	
 	public Medication () {
 		
 	}
 	
+
 	
 	public Medication(String medicationName, String dosageUnits, double dosageAmount, String medicationType, String frequency, int count, LocalTime timeToTakeMedication, String instructions, Doctor doctor, Pharmacy pharmacy, Alert...alerts) {
+
 		this.medicationName = medicationName;
 		this.dosageUnits = dosageUnits;
 		this.dosageAmount = dosageAmount;
 		this.medicationType = medicationType;
 		this.frequency = frequency;
 		this.count = count;
-		this.timeToTakeMedication = timeToTakeMedication;
+  	this.timeToTakeMedication = timeToTakeMedication;
 		this.instructions = instructions;
 		this.doctor = doctor;
 		this.pharmacy = pharmacy;
 		this.alerts = new HashSet<>(Arrays.asList(alerts));
 		
+
 	}
 	
 	public long getId() {
@@ -70,6 +77,7 @@ public class Medication {
 	
 	}
 	
+
 	public String getDosageUnits() {
 		return dosageUnits;
 	}
@@ -83,12 +91,14 @@ public class Medication {
 	}
 	
 	public String getFrequency() {
+
 		return frequency;
 	}
 	
 	public int getCount() {
 		return count;
 	}
+
 	
 	public LocalTime getTimeToTakeMedication() {
 		return timeToTakeMedication;
@@ -132,15 +142,7 @@ public class Medication {
 		return true;
 	}
 
-
 	
 
-
-	
-
-
-	
-	
-	
 
 }

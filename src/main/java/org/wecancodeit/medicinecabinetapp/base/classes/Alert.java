@@ -2,6 +2,7 @@ package org.wecancodeit.medicinecabinetapp.base.classes;
 
 
 
+
 import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,12 +15,13 @@ import java.time.LocalDateTime;
 
 
 @Entity
+
 public class Alert {
 	
 	@Id
 	@GeneratedValue
 	private long id;
-	
+  
 	private String name;	
 	private boolean taken;
 	private int dosageUnits;
@@ -49,19 +51,23 @@ public class Alert {
 		
 				
 	}
+
 	
 	public long getId() {
 		return id;
 	}
+
 	
 	public String getName() {
 		return name;
 	}
 
+
 	public boolean isTaken() {
 		return taken;
 	}
 	
+
 	public int getDosageUnits() {
 		return dosageUnits;
 	}
@@ -102,6 +108,7 @@ public class Alert {
 
 	
 	
+
 	
 	
 
