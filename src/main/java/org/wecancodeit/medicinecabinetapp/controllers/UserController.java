@@ -2,6 +2,7 @@ package org.wecancodeit.medicinecabinetapp.controllers;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.Optional;
 
 import javax.annotation.Resource;
@@ -42,6 +43,8 @@ public class UserController {
 }
 >>>>>>> removed curly braces
 =======
+=======
+>>>>>>> again
 public class UserController {
 
 }
@@ -81,4 +84,12 @@ public class UserController {
 }
 
 >>>>>>> adrienne
+<<<<<<< HEAD
 >>>>>>> fixed reds in medication
+=======
+=======
+public class UserController {
+
+}
+>>>>>>> development
+>>>>>>> again

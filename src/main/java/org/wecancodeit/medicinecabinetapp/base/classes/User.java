@@ -1,6 +1,7 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import javax.annotation.Generated;
@@ -60,10 +61,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+=======
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+>>>>>>> development
 public class User {
 	
 	@Id
 	@GeneratedValue
+<<<<<<< HEAD
 >>>>>>> adrienne
 >>>>>>> fixed reds in medication
 	private long id;
@@ -78,15 +85,26 @@ public class User {
 
 
 =======
+=======
+	private long id;
+	
+	private String userName;
+	private String userPassword;
+	private String userPhone;
+>>>>>>> development
 	//email id?
 	
 
 	
+<<<<<<< HEAD
 >>>>>>> adrienne
+=======
+>>>>>>> development
 	public User () {
 		
 	}
 	
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -104,20 +122,31 @@ public class User {
 =======
 	}
 >>>>>>> adrienne
+=======
+	public User(String userName, String userPassword, String userPhone) {
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.userPhone = userPhone;
+	}
+>>>>>>> development
 	
 	public long getId() {
 		return id;
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	
 	
 >>>>>>> adrienne
+=======
+>>>>>>> development
 	public String getUserName() {
 		return userName;
 	}
 	
+<<<<<<< HEAD
 	 public void setUserName(String userName) {
 		  this.userName = userName;
 		  }
@@ -152,10 +181,13 @@ public class User {
 
 =======
 	
+=======
+>>>>>>> development
 	public String getUserPassword() {
 		return userPassword;
 	}
 	
+<<<<<<< HEAD
 	public void setUserPassword(String userPassword) {
 		  this.userPassword = userPassword;
 		  }
@@ -176,6 +208,11 @@ public class User {
 		this.userEmail=userEmail;
 	}
 >>>>>>> adrienne
+=======
+	public String getUserPhone() {
+		return userPhone;
+	}
+>>>>>>> development
 	
 }
 
