@@ -4,6 +4,7 @@ package org.wecancodeit.medicinecabinetapp.controllers;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.Optional;
 
 import javax.annotation.Resource;
@@ -52,6 +53,13 @@ public class UserController {
 =======
 =======
 >>>>>>> login classes
+=======
+=======
+
+
+
+>>>>>>> development
+>>>>>>> trying
 import java.util.Optional;
 
 import javax.annotation.Resource;
@@ -62,6 +70,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.wecancodeit.medicinecabinetapp.base.classes.Login;
 import org.wecancodeit.medicinecabinetapp.base.classes.User;
+import org.wecancodeit.medicinecabinetapp.exceptions.UserNotFoundException;
 import org.wecancodeit.medicinecabinetapp.repositories.UserRepository;
 
 @Controller
@@ -95,6 +104,7 @@ public class UserController {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> adrienne
 <<<<<<< HEAD
 >>>>>>> fixed reds in medication
@@ -107,3 +117,10 @@ public class UserController {
 >>>>>>> again
 =======
 >>>>>>> login classes
+=======
+=======
+
+
+
+>>>>>>> development
+>>>>>>> trying

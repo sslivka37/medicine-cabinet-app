@@ -1,5 +1,6 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+<<<<<<< HEAD
 import javax.annotation.Generated;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,6 +33,7 @@ public class User {
 >>>>>>> updates to medication class
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+<<<<<<< HEAD
 
 public class User {
 	
@@ -55,6 +57,13 @@ public class User {
 import javax.annotation.Generated;
 =======
 >>>>>>> login classes
+=======
+=======
+
+
+
+>>>>>>> development
+>>>>>>> trying
 import javax.persistence.Entity;
 
 
@@ -77,6 +86,7 @@ public class User {
 	private String userPassword;
 	private String userPhone;
 	private String userEmail;
+<<<<<<< HEAD
 
 
 
@@ -87,12 +97,24 @@ public class User {
 	}
 
 	public User(String userName, String firstName, String lastName,String userPassword, String userPhone, String userEmail) {
+=======
+	
+	
+	
+	public User () {
+		
+	}
+	
+
+	public User (String userName, String firstName, String lastName,String userPassword, String userPhone, String userEmail) {
+>>>>>>> development
 		this.userName=userName;
 		this.firstName = firstName;
 		this.lastName=lastName;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userEmail=userEmail;
+<<<<<<< HEAD
 
 }
 
@@ -101,10 +123,23 @@ public class User {
 	public long getId() {
 		return id;
 	}
+=======
+	}
+
+	
+	public long getId() {
+		return id;
+	}
+	
+>>>>>>> development
 
 	public String getUserName() {
 		return userName;
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> development
 
 	 public void setUserName(String userName) {
 		  this.userName = userName;
@@ -123,6 +158,7 @@ public class User {
 		}
 		
 	public void setLastName(String lastName) {
+<<<<<<< HEAD
 	       this.lastName = lastName;
 	}
 		
@@ -139,6 +175,30 @@ public class User {
 	}
 
 
+=======
+		this.lastName = lastName;
+		}
+		
+
+	public String getUserPassword() {
+		return userPassword;
+	}
+	
+	public void setUserPassword(String userPassword) {
+		  this.userPassword = userPassword;
+		  }
+
+	public String getUserPhone() {
+		return userPhone;
+	}
+	
+
+	public void setUserPhone(String userPhone) {
+		this.userPhone=userPhone;
+	}
+	
+	
+>>>>>>> development
 	public String getUserEmail() {
 		return userEmail;
 	}
@@ -147,8 +207,11 @@ public class User {
 		this.userEmail=userEmail;
 	}
 
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> development
 	
 }
 
