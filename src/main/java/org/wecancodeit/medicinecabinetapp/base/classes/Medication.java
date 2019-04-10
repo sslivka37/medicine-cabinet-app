@@ -59,7 +59,7 @@ public class Medication {
 		this.medicationType = medicationType;
 		this.frequency = frequency;
 		this.count = count;
-  	this.timeToTakeMedication = timeToTakeMedication;
+		this.timeToTakeMedication = timeToTakeMedication;
 		this.instructions = instructions;
 		this.doctor = doctor;
 		this.pharmacy = pharmacy;

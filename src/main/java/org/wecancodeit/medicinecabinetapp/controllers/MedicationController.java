@@ -44,6 +44,13 @@ public class MedicationController {
 		return("medications");
 		
 	}
+	
+	@RequestMapping("/show-todays-medications")
+	public String findTodaysMedications(Model model) {
+		model.addAttribute("medications", medicationRepo.findAll());
+		return("medicationsForToday");
+		
+	}
 
 }
 
