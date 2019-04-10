@@ -6,6 +6,7 @@ package org.wecancodeit.medicinecabinetapp.controllers;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Optional;
@@ -16,11 +17,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
-
+import org.wecancodeit.medicinecabinetapp.base.classes.Alert;
+import org.wecancodeit.medicinecabinetapp.base.classes.Doctor;
 import org.wecancodeit.medicinecabinetapp.base.classes.Medication;
-
+import org.wecancodeit.medicinecabinetapp.base.classes.Pharmacy;
 import org.wecancodeit.medicinecabinetapp.exceptions.MedicationNotFoundException;
-
+import org.wecancodeit.medicinecabinetapp.repositories.AlertRepository;
 import org.wecancodeit.medicinecabinetapp.repositories.MedicationRepository;
 
 public class MedicationControllerTest {
@@ -37,6 +39,12 @@ public class MedicationControllerTest {
 		
 	@Mock
 	private MedicationRepository medicationRepo;
+	
+	@Mock
+	private AlertRepository alertRepo;
+	
+	@Mock
+	private Alert alert;
 	
 		
 	@Mock
@@ -67,6 +75,27 @@ public class MedicationControllerTest {
 		underTest.findAllMedications(model);		
 		verify(model).addAttribute("medications", allMedications);
 				
+	}
+	
+	@Test
+	public void Should_Add_Additional_Medications_To_Model() {
+		String alert = "alert name";
+		//Alert newAlert = alertRepo.findByName(alert);
+		
+		String medicationName = ("foo");
+		String dosageUnits = ("foo");
+		double dosageAmount = (0.00);
+		String medicationType = "foo";
+		String frequency = "new frequency";
+		int count = 0;
+		
+		String instructions = ("new instructions");
+		Doctor doctor = new Doctor() ;
+		Pharmacy pharmacy = new Pharmacy();
+		Alert alertName = new Alert();
+		underTest.addMedication(medicationName, dosageUnits, dosageAmount, medicationType, frequency, instructions, doctor, pharmacy, alertName);
+		Medication newMedication = new Medication(instructions, instructions, dosageAmount, instructions, instructions, instructions, doctor, pharmacy, null);
+		when(medicationRepo.save(newMedication)).thenReturn(newMedication);
 	}
 
 

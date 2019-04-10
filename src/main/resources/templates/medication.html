@@ -24,6 +24,63 @@
 		
 				
 	</div>		
+	
+	<form method="POST">
+		<div>
+		<label>Enter Medication Name:</label>
+		<input type="text" name="medicationName" />
+		</div>
+		
+		<div>
+		<label>Enter Dosage Units:</label>
+		<input type="text" name="dosageUnits" />
+		</div>
+		
+		<div>
+		<label>Enter Dosage Amount:</label>
+		<input type="text" name="dosageAmount" />
+		</div>
+		
+		<div>
+		<label>Enter Medication Type:</label>
+		<input type="text" name="medicationType" />
+		</div>
+		
+		<div>
+		<label>Enter Frequency:</label>
+		<input type="text" name="frequency" />
+		</div>
+		
+		<div>
+		<label>Enter Time To Take Medication:</label>
+		<input type="text" name="timeToTakeMedication" />
+		</div>
+		
+		<div>
+		<label>Enter Special Instructions:</label>
+		<input type="text" name="instructions" />
+		</div>
+		
+		<div>
+		<label>Enter Prescribing Doctor:</label>
+		<input type="text" name="doctor" />
+		</div>
+		
+		<div>
+		<label>Enter Pharmacy:</label>
+		<input type="text" name="pharmacy" />
+		</div>
+		
+		<div>
+		<label>Enter Alert:</label>
+		<input type="text" name="alertName" />
+		</div>
+		
+		<div>
+		<button th:formaction="@{add-medication}"> add medication</button>
+		</div>
+	
+	</form>
 		
 
 </body>
