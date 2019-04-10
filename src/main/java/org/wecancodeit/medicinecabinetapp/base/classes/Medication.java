@@ -45,7 +45,7 @@ public class Medication {
 		//will have to work on relationships between med-pharm and med-doc
 
 	
-	public Medication () {
+	public Medication (String medicationName2, String dosageUnits2, double dosageAmount2, String medicationType2, String frequency2, String instructions2, Doctor doctor2, Pharmacy pharmacy2, Alert alertName) {
 		
 	}
 	
