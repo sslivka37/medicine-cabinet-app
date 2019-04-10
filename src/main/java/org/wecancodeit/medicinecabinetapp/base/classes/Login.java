@@ -1,11 +1,10 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
-<<<<<<< HEAD
-=======
-import java.sql.SQLException;
 
 
->>>>>>> adrienne
+
+
+
 public class Login {
 	
 	private String username;
