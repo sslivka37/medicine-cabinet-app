@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.wecancodeit.medicinecabinetapp.LoginController;
 import org.wecancodeit.medicinecabinetapp.dataaccess.LoginDao;
 import org.wecancodeit.medicinecabinetapp.base.classes.Login;
+import org.wecancodeit.medicinecabinetapp.controllers.LoginController;
 
 public class LoginServlet {
 
@@ -24,19 +24,19 @@ public class LoginServlet {
 		login.setUsername(userName); //setting the username and password through the loginBean object then only you can get it in future.
 		 login.setPassword(password);
 		 
-		LoginDao loginDao = new LoginDao(); //creating object for LoginDao. This class contains main logic of the application.
+		LoginDao loginDao = new LoginDao(); 
 		 
-		String userValidate = loginDao.authenticateUser(login); //Calling authenticateUser function
+		String userValidate = loginDao.authenticateUser(login); 
 		 
-		if(userValidate.equals("SUCCESS")) //If function returns success string then user will be rooted to Home page
+		if(userValidate.equals("SUCCESS")) 
 		 {
-		 request.setAttribute("userName", userName); //with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
-		 request.getRequestDispatcher("/Home.jsp").forward(request, response);//RequestDispatcher is used to send the control to the invoked page.
+		 request.setAttribute("userName", userName); 
+		 request.getRequestDispatcher("/Home.jsp").forward(request, response);
 		 }
 		 else
 		 {
-		 request.setAttribute("errMessage", userValidate); //If authenticateUser() function returnsother than SUCCESS string it will be sent to Login page again. Here the error message returned from function has been stored in a errMessage key.
-		 request.getRequestDispatcher("/Login.jsp").forward(request, response);//forwarding the request
+		 request.setAttribute("errMessage", userValidate); 
+		 request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		 }
 		 }
 		 

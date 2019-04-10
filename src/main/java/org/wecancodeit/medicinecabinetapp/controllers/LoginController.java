@@ -1,4 +1,4 @@
-package org.wecancodeit.medicinecabinetapp;
+package org.wecancodeit.medicinecabinetapp.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.wecancodeit.medicinecabinetapp.base.classes.Login;
 import org.wecancodeit.medicinecabinetapp.base.classes.User;
-import org.wecancodeit.medicinecabinetapp.controllers.UserController;
 
 @Controller
 public class LoginController {
