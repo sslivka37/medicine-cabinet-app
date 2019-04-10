@@ -1,5 +1,7 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -24,6 +26,10 @@ public class Alert {
 	
 	//loaded constructor?
 	
+	public Alert(String medicine, boolean b, int i, String type, LocalDateTime timeToSendAlert) {
+		
+	}
+
 	public long getId() {
 		return id;
 	}

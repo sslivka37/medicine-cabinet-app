@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import jbr.springmvc.model.Login;
-import jbr.springmvc.model.User;
-import jbr.springmvc.service.UserService;
+import org.wecancodeit.medicinecabinetapp.base.classes.Login;
+import org.wecancodeit.medicinecabinetapp.base.classes.User;
+import org.wecancodeit.medicinecabinetapp.controllers.UserController;
 
 @Controller
 public class LoginController {
   
   @Autowired
-  UserService userService;
+  UserController userController;
   
   @RequestMapping(value = "/login", method = RequestMethod.GET)
   public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
@@ -30,10 +30,10 @@ public class LoginController {
  
  @ModelAttribute("login") Login login) {
     ModelAndView mav = null;
-    User user = userService.validateUser(login);
+    User user = userController.validateUser(login);
     if (null != user) {
     mav = new ModelAndView("welcome");
-    mav.addObject("firstname", user.getFirstname());
+    mav.addObject("firstname", user.getFirstName());
     } else {
     mav = new ModelAndView("login");
     mav.addObject("message", "Username or Password is wrong!!");

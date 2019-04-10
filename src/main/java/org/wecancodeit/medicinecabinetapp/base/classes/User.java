@@ -1,9 +1,5 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 import javax.annotation.Generated;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +13,7 @@ import javax.persistence.Entity;
 >>>>>>> fix
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+<<<<<<< HEAD
 
 @Entity
 public class User {
@@ -56,23 +53,22 @@ public class User {
 =======
 =======
 import javax.annotation.Generated;
+=======
+>>>>>>> login classes
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
 
 @Entity
-=======
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
->>>>>>> development
 public class User {
 	
 	@Id
 	@GeneratedValue
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> adrienne
 >>>>>>> fixed reds in medication
+=======
+>>>>>>> login classes
 	private long id;
 	
 	private String userName;
@@ -81,34 +77,15 @@ public class User {
 	private String userPassword;
 	private String userPhone;
 	private String userEmail;
-<<<<<<< HEAD
 
 
-=======
-=======
-	private long id;
-	
-	private String userName;
-	private String userPassword;
-	private String userPhone;
->>>>>>> development
-	//email id?
-	
 
-	
-<<<<<<< HEAD
->>>>>>> adrienne
-=======
->>>>>>> development
+
+
 	public User () {
 		
 	}
-	
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> adrienne
 	public User(String userName, String firstName, String lastName,String userPassword, String userPhone, String userEmail) {
 		this.userName=userName;
 		this.firstName = firstName;
@@ -116,37 +93,19 @@ public class User {
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userEmail=userEmail;
-<<<<<<< HEAD
+
 }
 
-=======
-	}
->>>>>>> adrienne
-=======
-	public User(String userName, String userPassword, String userPhone) {
-		this.userName = userName;
-		this.userPassword = userPassword;
-		this.userPhone = userPhone;
-	}
->>>>>>> development
-	
+
+
 	public long getId() {
 		return id;
 	}
-	
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	
-	
->>>>>>> adrienne
-=======
->>>>>>> development
+
 	public String getUserName() {
 		return userName;
 	}
-	
-<<<<<<< HEAD
+
 	 public void setUserName(String userName) {
 		  this.userName = userName;
 		  }
@@ -163,11 +122,11 @@ public class User {
 			return lastName;
 		}
 		
-		 public void setLastName(String lastName) {
-			  this.lastName = lastName;
-			  }
+	public void setLastName(String lastName) {
+	       this.lastName = lastName;
+	}
 		
-<<<<<<< HEAD
+
 	public String getUserPassword() {
 		return userPassword;
 	}
@@ -179,40 +138,17 @@ public class User {
 		return userPhone;
 	}
 
-=======
-	
-=======
->>>>>>> development
-	public String getUserPassword() {
-		return userPassword;
-	}
-	
-<<<<<<< HEAD
-	public void setUserPassword(String userPassword) {
-		  this.userPassword = userPassword;
-		  }
-	
-	public String getUserPhone() {
-		return userPhone;
-	}
->>>>>>> adrienne
-	public void setUserPhone(String userPhone) {
-		this.userPhone=userPhone;
-	}
+
 	public String getUserEmail() {
 		return userEmail;
 	}
-<<<<<<< HEAD
-=======
+
 	public void setUserEmail(String userEmail) {
 		this.userEmail=userEmail;
 	}
->>>>>>> adrienne
-=======
-	public String getUserPhone() {
-		return userPhone;
-	}
->>>>>>> development
+
+	
+
 	
 }
 

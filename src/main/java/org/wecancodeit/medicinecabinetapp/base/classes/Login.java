@@ -2,6 +2,7 @@ package org.wecancodeit.medicinecabinetapp.base.classes;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.sql.SQLException;
 
 
@@ -10,10 +11,17 @@ import java.sql.SQLException;
 =======
 =======
 import java.sql.SQLException;
+=======
+>>>>>>> login classes
 
+import java.sql.SQLException;
 
+<<<<<<< HEAD
 >>>>>>> adrienne
 >>>>>>> fixed reds in medication
+=======
+@SuppressWarnings("unused")
+>>>>>>> login classes
 public class Login {
 	
 	private String username;
