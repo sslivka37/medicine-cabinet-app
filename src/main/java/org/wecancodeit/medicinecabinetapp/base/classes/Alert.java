@@ -1,15 +1,9 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
-<<<<<<< HEAD
-import java.time.LocalDateTime;
-
-=======
-
 
 
 import java.util.Collection;
 import javax.persistence.Entity;
->>>>>>> development
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -17,10 +11,7 @@ import java.time.LocalDateTime;
 
 
 
-
-
 @Entity
-
 public class Alert {
 	
 	@Id
@@ -58,9 +49,7 @@ public class Alert {
 	}
 
 	
-	public Alert(String medicine, boolean b, int i, String type, LocalDateTime timeToSendAlert) {
-		
-	}
+	
 
 	public long getId() {
 		return id;

@@ -1,18 +1,18 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
 
-<<<<<<< HEAD
 import java.util.ArrayList;
-=======
->>>>>>> development
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import java.time.LocalTime;
 
@@ -36,19 +36,15 @@ public class Medication {
 	private String frequency;
 	private String instructions;
 	private int count;
-<<<<<<< HEAD
+
 
 	private String alert;
-    private String pharmacy;
+    
     
     @ManyToOne
     private String user;
 
-    @OneToMany
-    private Collection<Alert> alerts;
-
-    public Medication () {
-=======
+   
 	private LocalTime timeToTakeMedication;
 	
 	@OneToOne
@@ -65,36 +61,27 @@ public class Medication {
 
 	
 	public Medication () {
->>>>>>> development
-		
+
 	}
 	
 
-<<<<<<< HEAD
-	public Medication(String medicationName, String dosageUnits, double dosageAmount, String medicationType, int frequency, int count, 
-			String user, String alert, String pharmacy) {
-=======
+
 	
 	public Medication(String medicationName, String dosageUnits, double dosageAmount, String medicationType, String frequency, int count, LocalTime timeToTakeMedication, String instructions, Doctor doctor, Pharmacy pharmacy, Alert...alerts) {
->>>>>>> development
-
 		this.medicationName = medicationName;
 		this.dosageUnits = dosageUnits;
 		this.dosageAmount = dosageAmount;
 		this.medicationType = medicationType;
 		this.frequency = frequency;
 		this.count = count;
-  	this.timeToTakeMedication = timeToTakeMedication;
+  	    this.timeToTakeMedication = timeToTakeMedication;
 		this.instructions = instructions;
 		this.doctor = doctor;
 		this.pharmacy = pharmacy;
 		this.alerts = new HashSet<>(Arrays.asList(alerts));
 		
-<<<<<<< HEAD
-		List<Medication> medications = new ArrayList<Medication>();
-=======
->>>>>>> development
 
+		List<Medication> medications = new ArrayList<Medication>();
 	}
 	
 	public long getId() {
@@ -105,11 +92,7 @@ public class Medication {
 		return medicationName;
 	
 	}
-	
-<<<<<<< HEAD
-=======
 
->>>>>>> development
 	public String getDosageUnits() {
 		return dosageUnits;
 	}

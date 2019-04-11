@@ -1,6 +1,6 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
-<<<<<<< HEAD
+
 import javax.annotation.Generated;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +34,7 @@ public class User {
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 public class User {
 	
@@ -64,6 +65,9 @@ import javax.annotation.Generated;
 
 >>>>>>> development
 >>>>>>> trying
+=======
+
+>>>>>>> registration not working. add txt file for sql code
 import javax.persistence.Entity;
 
 
@@ -86,20 +90,12 @@ public class User {
 	private String userPassword;
 	private String userPhone;
 	private String userEmail;
-<<<<<<< HEAD
 
 
 
 
 
-	public User () {
-		
-	}
 
-	public User(String userName, String firstName, String lastName,String userPassword, String userPhone, String userEmail) {
-=======
-	
-	
 	
 	public User () {
 		
@@ -107,39 +103,24 @@ public class User {
 	
 
 	public User (String userName, String firstName, String lastName,String userPassword, String userPhone, String userEmail) {
->>>>>>> development
+
 		this.userName=userName;
 		this.firstName = firstName;
 		this.lastName=lastName;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userEmail=userEmail;
-<<<<<<< HEAD
+
 
 }
 
-
-
-	public long getId() {
-		return id;
-	}
-=======
-	}
-
-	
 	public long getId() {
 		return id;
 	}
 	
->>>>>>> development
-
 	public String getUserName() {
 		return userName;
 	}
-<<<<<<< HEAD
-=======
-	
->>>>>>> development
 
 	 public void setUserName(String userName) {
 		  this.userName = userName;
@@ -158,7 +139,6 @@ public class User {
 		}
 		
 	public void setLastName(String lastName) {
-<<<<<<< HEAD
 	       this.lastName = lastName;
 	}
 		
@@ -168,37 +148,16 @@ public class User {
 	}
 	public void setUserPassword(String userPassword) {
 		  this.userPassword = userPassword;
-		  }
-
-	public String getUserPhone() {
-		return userPhone;
-	}
-
-
-=======
-		this.lastName = lastName;
-		}
-		
-
-	public String getUserPassword() {
-		return userPassword;
-	}
-	
-	public void setUserPassword(String userPassword) {
-		  this.userPassword = userPassword;
-		  }
+    }
 
 	public String getUserPhone() {
 		return userPhone;
 	}
 	
-
 	public void setUserPhone(String userPhone) {
 		this.userPhone=userPhone;
 	}
 	
-	
->>>>>>> development
 	public String getUserEmail() {
 		return userEmail;
 	}
@@ -207,11 +166,7 @@ public class User {
 		this.userEmail=userEmail;
 	}
 
-<<<<<<< HEAD
-	
 
-=======
->>>>>>> development
 	
 }
 

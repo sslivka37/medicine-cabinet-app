@@ -11,5 +11,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
 		  User validateUser(Login login);
 
+		User findByEmail(String email);
+
 
 }
