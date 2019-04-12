@@ -30,8 +30,8 @@ public class UserService {
 		}
 
 
-		public void register(User user) {
-		
+		public String register(User user) {
+		    return user.getFirstName();
 			
 		}
 		

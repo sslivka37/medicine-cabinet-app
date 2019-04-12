@@ -19,9 +19,6 @@ import java.time.LocalTime;
 
 
 @Entity
-
-
-
 public class Medication {
 	
 	@Id

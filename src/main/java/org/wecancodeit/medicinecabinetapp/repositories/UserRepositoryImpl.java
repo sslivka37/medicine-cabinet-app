@@ -3,7 +3,7 @@ package org.wecancodeit.medicinecabinetapp.repositories;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-<<<<<<< HEAD
+
 import java.util.Optional;
 
 import javax.sql.DataSource;
@@ -12,21 +12,21 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.wecancodeit.medicinecabinetapp.Login;
 import org.wecancodeit.medicinecabinetapp.base.classes.User;	
-=======
+
 
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.wecancodeit.medicinecabinetapp.base.classes.Login;
 import org.wecancodeit.medicinecabinetapp.base.classes.User;
 
 
-public class UserRepositoryImpl {
+    public class UserRepositoryImpl {
 
 	@Autowired
 	  DataSource datasource;
+	
 	  @Autowired
 	  JdbcTemplate jdbcTemplate;
 	  public void register(User user) {
@@ -48,8 +48,8 @@ public class UserRepositoryImpl {
 	  class UserMapper implements RowMapper<User> {
 	  public User mapRow(ResultSet rs, int arg1) throws SQLException {
 	    User user = new User();
-<	    user.setFirstName(rs.getString("firstname"));
-		user.setLastName(rs.getString("lastname"));
+	    user.setFirstName (rs.getString("first name"));
+		user.setLastName(rs.getString("last name"));
         user.setUserName(rs.getString("userName"));
         user.setUserPassword(rs.getString("password"));
 	    user.setUserEmail(rs.getString("email"));
