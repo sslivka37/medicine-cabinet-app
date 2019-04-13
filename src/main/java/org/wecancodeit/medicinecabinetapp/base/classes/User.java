@@ -2,86 +2,17 @@ package org.wecancodeit.medicinecabinetapp.base.classes;
 
 
 import javax.annotation.Generated;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import javax.persistence.Entity;
-=======
-=======
->>>>>>> development
->>>>>>> fix
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-<<<<<<< HEAD
-
-@Entity
-public class User {
-	
-	@Id
-<<<<<<< HEAD
-	@GeneratedValue
-=======
-=======
-=======
->>>>>>> development
->>>>>>> empty
-=======
->>>>>>> user classes up to date
-=======
->>>>>>> updates to medication class
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-public class User {
-	
-	@Id
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	@Generated
->>>>>>> removed curly braces
-=======
-=======
-<<<<<<< HEAD
->>>>>>> fix
-=======
->>>>>>> updates to medication class
-	@Generated(value = { "" })
-<<<<<<< HEAD
->>>>>>> user classes up to date
-=======
-=======
-import javax.annotation.Generated;
-=======
->>>>>>> login classes
-=======
-=======
-
-
-
->>>>>>> development
->>>>>>> trying
-=======
-
->>>>>>> registration not working. add txt file for sql code
-import javax.persistence.Entity;
 
 
 @Entity
 public class User {
-	
+
+
 	@Id
 	@GeneratedValue
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> adrienne
->>>>>>> fixed reds in medication
-=======
->>>>>>> login classes
 	private long id;
 	
 	private String userName;
@@ -91,16 +22,6 @@ public class User {
 	private String userPhone;
 	private String userEmail;
 
-
-
-
-
-
-	
-	public User () {
-		
-	}
-	
 
 	public User (String userName, String firstName, String lastName,String userPassword, String userPhone, String userEmail) {
 
