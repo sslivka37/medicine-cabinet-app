@@ -1,4 +1,7 @@
+
+
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title >All Active Medications</title>
@@ -12,7 +15,11 @@
 		<p><a th:href="@{/medication(id=${medication.id})}" th:text="${medication.medicationName}"></a></p>
 	</div>
 	
-	<form method="POST">
+
+	 <form method= "POST" action = "/addmedication">
+	
+	
+
 		<div>
 		<label>Enter Medication Name:</label>
 		<input type="text" name="medicationName" />
@@ -33,38 +40,64 @@
 		<input type="text" name="medicationType" />
 		</div>
 		
+
+
+		
+		
+
 		<div>
 		<label>Enter Frequency:</label>
 		<input type="text" name="frequency" />
 		</div>
 		
 		<div>
+
+		<label>Enter Medication Count:</label>
+		<input type="text" name="medicationType" />
+		</div>
+		
+		<!-- <div>
 		<label>Enter Time To Take Medication:</label>
 		<input type="text" name="timeToTakeMedication" />
-		</div>
+		</div>-->
+
 		
 		<div>
 		<label>Enter Special Instructions:</label>
 		<input type="text" name="instructions" />
 		</div>
 		
-		<div>
+
+		
+		<!--  <div>
 		<label>Enter Prescribing Doctor:</label>
-		<input type="text" name="doctor" />
+		<input type="text" name="doctorName" />
+
 		</div>
 		
 		<div>
 		<label>Enter Pharmacy:</label>
+
 		<input type="text" name="pharmacy" />
+
+		<input type="text" name="pharmacyName" />
+
 		</div>
 		
 		<div>
 		<label>Enter Alert:</label>
 		<input type="text" name="alertName" />
+
 		</div>
 		
 		<div>
 		<button th:formaction="@{add-medication}"> add medication</button>
+
+		</div>-->
+		
+		<div>
+		<button type="submit"> add medication</button>
+
 		</div>
 	
 	</form>

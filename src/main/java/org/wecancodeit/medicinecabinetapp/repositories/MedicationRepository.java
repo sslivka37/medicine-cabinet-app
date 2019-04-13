@@ -9,5 +9,15 @@ public interface MedicationRepository extends CrudRepository<Medication, Long> {
 
 	Medication findByName(String medicationName);
 
+	
+	
+	
+	
+	
+	//default Medication findByName(Medication medicationName) {
+		//return medicationName;
+	//}	
+		
+
 
 }

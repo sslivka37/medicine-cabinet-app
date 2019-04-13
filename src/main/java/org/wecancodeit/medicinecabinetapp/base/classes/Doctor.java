@@ -12,7 +12,7 @@ public class Doctor {
 	@GeneratedValue
 	private long id;
 	
-	private String doctorName;
+	private String name;
 	private String doctorPhone;
 	
 	
@@ -20,8 +20,8 @@ public class Doctor {
 		
 	}
 	
-	public Doctor(String doctorName, String doctorPhone) {
-		this.doctorName = doctorName;
+	public Doctor(String name, String doctorPhone) {
+		this.name = name;
 		this.doctorPhone = doctorPhone;
 	}
 	
@@ -29,9 +29,13 @@ public class Doctor {
 		return id;
 	}
 	
+	public void setDoctorName(String name) {
+		this.name = name;
+	}
+	
 	
 	public String getDoctorName() {
-		return doctorName;
+		return name;
 	}
 	
 	
