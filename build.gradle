@@ -14,6 +14,7 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
 
 dependencies {
@@ -29,4 +30,6 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
-    
+    compile ("com.oracle:ojdbc7:12.1.0.1") 
+
+}
