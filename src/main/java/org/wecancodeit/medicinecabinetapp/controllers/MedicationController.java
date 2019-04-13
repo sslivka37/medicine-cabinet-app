@@ -57,28 +57,15 @@ public class MedicationController {
 		
 	}
 
-	
-	//public String addMedication(String medicationName, String dosageUnits, double dosageAmount, String medicationType,
-			//String frequency, int count, LocalTime timeToTakeMedication, String instructions, Doctor doctor, Pharmacy pharmacy,
-			//Long alertName) {
-		//Optional<Alert> alert = alertRepo.findById(alertName);
-		//Medication newMedication = medicationRepo.findByName(medicationName);
-		
-		//if(newMedication==null) {
-			//newMedication = new Medication(medicationName, dosageUnits, dosageAmount, medicationType,
-					//frequency, timeToTakeMedication, instructions, doctor, pharmacy, alertName);
-			//medicationRepo.save(newMedication);
-		//}
-		//return "redirect:/show-medications";
 		
 	
 	@RequestMapping("/add-medication")
-	public Medication addMedication(String medicationName, String dosageUnits, double dosageAmount, String medicationType,
+	public String addMedication(String medicationName, String dosageUnits, double dosageAmount, String medicationType,
 			String frequency, String instructions, Doctor doctor, Pharmacy pharmacy,
 			Alert alertName) {
-		// TODO Auto-generated method stub
-		Alert alert = alertRepo.findByName(alertName);
-		Medication newMedication = medicationRepo.findByName(medicationName);
+		
+			Alert alert = alertRepo.findByName(alertName);
+			Medication newMedication = medicationRepo.findByName(medicationName);
 		
 		
 		if(newMedication==null) {
@@ -86,7 +73,7 @@ public class MedicationController {
 					frequency, instructions, doctor, pharmacy, alertName);
 			medicationRepo.save(newMedication);
 		}
-		return newMedication;
+		return "redirect:/show-medications";
 	}
 
 }
