@@ -5,9 +5,19 @@ import org.wecancodeit.medicinecabinetapp.base.classes.Alert;
 
 public interface AlertRepository extends CrudRepository<Alert, Long> {
 
-	default Alert findByName(Alert alertName) {
-		return alertName;
+	Alert findByName(String alertName);
+
+	
+
+	
+	
+	
+	
+	
+	
+	//default Alert findByName(Alert alertName) {
+		//return alertName;
 		
-	};
+	//};
 
 }

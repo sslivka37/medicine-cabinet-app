@@ -17,6 +17,7 @@
 		<p th:text = "${medication.dosageUnits}"></p>
 		<p th:text = "${medication.medicationType}"></p>
 		<p th:text = "${medication.frequency}"></p>
+		<p th:text = "${medication.count}"></p>
 		<p th:text = "${medication.timeToTakeMedication}"></p>
 		<p th:text = "${medication.instructions}"></p>
 		<p th:text = "${medication.doctor}"></p>
@@ -26,62 +27,7 @@
 	</div>		
 
 	
-	<form method="POST">
-		<div>
-		<label>Enter Medication Name:</label>
-		<input type="text" name="medicationName" />
-		</div>
-		
-		<div>
-		<label>Enter Dosage Units:</label>
-		<input type="text" name="dosageUnits" />
-		</div>
-		
-		<div>
-		<label>Enter Dosage Amount:</label>
-		<input type="text" name="dosageAmount" />
-		</div>
-		
-		<div>
-		<label>Enter Medication Type:</label>
-		<input type="text" name="medicationType" />
-		</div>
-		
-		<div>
-		<label>Enter Frequency:</label>
-		<input type="text" name="frequency" />
-		</div>
-		
-		<div>
-		<label>Enter Time To Take Medication:</label>
-		<input type="text" name="timeToTakeMedication" />
-		</div>
-		
-		<div>
-		<label>Enter Special Instructions:</label>
-		<input type="text" name="instructions" />
-		</div>
-		
-		<div>
-		<label>Enter Prescribing Doctor:</label>
-		<input type="text" name="doctor" />
-		</div>
-		
-		<div>
-		<label>Enter Pharmacy:</label>
-		<input type="text" name="pharmacy" />
-		</div>
-		
-		<div>
-		<label>Enter Alert:</label>
-		<input type="text" name="alertName" />
-		</div>
-		
-		<div>
-		<button th:formaction="@{add-medication}"> add medication</button>
-		</div>
 	
-	</form>
 
 	<a href ="http://localhost:8080/show-todays-medications">Back to Today's Medications</a>
 	<a href ="http://localhost:8080/show-medications">Back to All Medications</a>

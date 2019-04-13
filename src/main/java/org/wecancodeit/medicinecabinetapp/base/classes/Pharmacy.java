@@ -12,7 +12,7 @@ public class Pharmacy {
 	@GeneratedValue
 	private long id;
 	
-	private String pharmacyName;
+	private String name;
 	private String pharmacyAddress;
 	private String pharmacyPhone;
 		
@@ -21,8 +21,8 @@ public class Pharmacy {
 		
 	}
 	
-	public Pharmacy(String pharmacyName, String pharmacyAddress, String pharmacyPhone) {
-		this.pharmacyName = pharmacyName;
+	public Pharmacy(String name, String pharmacyAddress, String pharmacyPhone) {
+		this.name = name;
 		this.pharmacyAddress = pharmacyAddress;
 		this.pharmacyPhone = pharmacyPhone;
 	}
@@ -31,9 +31,12 @@ public class Pharmacy {
 		return id;
 	}
 	
+	public void setPharmacyName(String name) {
+		this.name = name;
+	}
 	
 	public String getPharmacyName() {
-		return pharmacyName;
+		return name;
 	}
 	
 	public String getPharmacyAddress() {

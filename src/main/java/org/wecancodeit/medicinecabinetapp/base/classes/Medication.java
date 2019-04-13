@@ -23,13 +23,13 @@ public class Medication {
 	private long id;
 	
 
-	private String medicationName;
+	private String name;
 	private String dosageUnits;
 	private double dosageAmount;
 	private String medicationType;
 	private String frequency;
 	private String instructions;
-	private int count;
+	private String count;
 	private LocalTime timeToTakeMedication;
 	
 	@OneToOne
@@ -42,18 +42,22 @@ public class Medication {
 	private Collection <Alert> alerts;
 	
 		
-		//will have to work on relationships between med-pharm and med-doc
-
-	
-	public Medication (String medicationName2, String dosageUnits2, double dosageAmount2, String medicationType2, String frequency2, String instructions2, Doctor doctor2, Pharmacy pharmacy2, Alert alertName) {
+	public Medication ()	{
 		
 	}
 	
+	
 
 	
-	public Medication(String medicationName, String dosageUnits, double dosageAmount, String medicationType, String frequency, int count, LocalTime timeToTakeMedication, String instructions, Doctor doctor, Pharmacy pharmacy, Alert...alerts) {
+	//public Medication (String medicationName2, String dosageUnits2, double dosageAmount2, String medicationType2, String frequency2, String instructions2, Doctor doctor2, Pharmacy pharmacy2, Alert alertName) {
+		
+	//}
+	
 
-		this.medicationName = medicationName;
+	
+	public Medication(String name, String dosageUnits, double dosageAmount, String medicationType, String frequency, String count, LocalTime timeToTakeMedication, String instructions, Doctor doctor, Pharmacy pharmacy, Alert...alerts) {
+
+		this.name = name;
 		this.dosageUnits = dosageUnits;
 		this.dosageAmount = dosageAmount;
 		this.medicationType = medicationType;
@@ -72,9 +76,17 @@ public class Medication {
 		return id;
 	}
 	
-	public String getMedicationName() {
-		return medicationName;
+	public void setMedciationName(String name) {
+		 this.name = name;
+	}
 	
+	public String getMedicationName() {
+		return name;
+	
+	}
+	
+	public void setDosageUnits(String dosageUnits) {
+		this.dosageUnits = dosageUnits;
 	}
 	
 
@@ -82,12 +94,24 @@ public class Medication {
 		return dosageUnits;
 	}
 	
+	public void setDosageAmount(double dosageAmount) {
+		this.dosageAmount= dosageAmount;
+	}
+	
 	public double getDosageAmount() {
 		return dosageAmount;
 	}
 	
+	public void setMedicationType(String medicationType) {
+		this.medicationType = medicationType;
+	}
+	
 	public String getMedicationType() {
 		return medicationType;
+	}
+	
+	public void setFrequency(String frequency) {
+		this.frequency = frequency;
 	}
 	
 	public String getFrequency() {
@@ -95,7 +119,11 @@ public class Medication {
 		return frequency;
 	}
 	
-	public int getCount() {
+	public void setCount(String count) {
+		this.count = count;
+	}
+	
+	public String getCount() {
 		return count;
 	}
 
@@ -104,9 +132,15 @@ public class Medication {
 		return timeToTakeMedication;
 	}
 	
+	public void setInstructions(String instructions) {
+		this.instructions = instructions;
+	}
+	
 	public String getInstructions() {
 		return instructions;
 	}
+	
+	
 	
 	public Collection <Alert> getAlerts(){
 		return alerts;
@@ -116,8 +150,23 @@ public class Medication {
 		return doctor;
 	}
 	
+	public void setDoctorName(String doctorName) {
+		this.setDoctorName(doctorName);
+		
+	}
+	
 	public Object getPharmacy() {
 		return pharmacy;
+	}
+	
+	public void setPharmacyName(String pharmacyName) {
+		this.setPharmacyName(pharmacyName);
+		
+	}
+	
+	public void setAlertName(String alertName) {
+		this.setAlertName(alertName);
+		
 	}
 
 	@Override
@@ -141,6 +190,11 @@ public class Medication {
 			return false;
 		return true;
 	}
+
+
+
+
+	
 
 	
 
