@@ -1,11 +1,18 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+import org.springframework.data.annotation.Transient;
 
 @Entity
+@Table(name="user")
 public class User {
 	
 	@Id
@@ -20,7 +27,11 @@ public class User {
 	private String userEmail;
 
 	
+@Transient
+private String passwordConfirm;
 
+@ManyToMany
+private Set<Role> roles;
 	
 	public User () {
 		
@@ -39,7 +50,7 @@ public class User {
 		return id;
 	}
 	
-	public String userName() {
+	public String getUserName() {
 		return userName;
 	}
 
@@ -47,7 +58,7 @@ public class User {
 		this.userName=userName;
 	}
 	
-	public String firstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 	
@@ -86,6 +97,21 @@ public class User {
 		this.userEmail=userEmail;
 	}
 	
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
+	
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm=passwordConfirm;
+	}
+	
+	public Set<Role> getRoles(){
+		return roles;
+	}
+	
+	public void setRoles(Set<Role> roles) {
+		this.roles=roles;
+	}
 
 }
 

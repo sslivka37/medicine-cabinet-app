@@ -27,4 +27,6 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
-}
+	compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+    
