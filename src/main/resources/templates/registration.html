@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <body>
+<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
 <h1 th:text="#{label.form.title}">form</h1>
 <form action="/" th:object="${user}" method="POST" enctype="utf8">
     <div>
@@ -36,4 +37,6 @@
 <a th:href="@{/login.html}" th:text="#{label.form.loginLink}">login</a>
 
 	</body>
+	<footer></footer>
+	<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
 </html>
