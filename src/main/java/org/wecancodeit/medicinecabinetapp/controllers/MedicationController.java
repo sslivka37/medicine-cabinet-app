@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -90,6 +91,11 @@ public class MedicationController {
 		
 		return "redirect:/show-medications";
 	}
+	
+	@GetMapping ("/add-medication")
+	public String showAddMedPage() {
+		return "addmedication";
+	}
 
 }
 
@@ -99,6 +105,18 @@ public class MedicationController {
 
 
 
+
+
+
+		
+	
+	//@RequestMapping("/add-medication")
+	//public String addMedication(String medicationName, String dosageUnits, double dosageAmount, String medicationType,
+	//		String frequency, String instructions, Doctor doctor, Pharmacy pharmacy,
+	//		Alert alertName) {
+		
+	//		Alert alert = alertRepo.findByName(alertName);
+	//		Medication newMedication = medicationRepo.findByName(medicationName);
 
 
 	
@@ -122,6 +140,7 @@ public class MedicationController {
 			//String frequency, String instructions, String doctorName, String pharmacyName,
 			//String alertName) {
 
+
 		
 	
 	//@RequestMapping("/add-medication")
@@ -132,10 +151,23 @@ public class MedicationController {
 			//Alert alert = alertRepo.findByName(alertName);
 			//Medication newMedication = medicationRepo.findByName(medicationName);
 
+
 		
 		//Alert alert = alertRepo.findByName(alertName);
 		//Medication newMedication = medicationRepo.findByName(medicationName);
 		
+
+
+	//	if(newMedication==null) {
+	//		newMedication = new Medication(medicationName, dosageUnits, dosageAmount, medicationType,
+	//				frequency, instructions, doctor, pharmacy, alertName);
+	//		medicationRepo.save(newMedication);
+	//	}
+	//	return "redirect:/show-medications";
+//	}
+
+//}
+
 
 		
 		//if(newMedication==null) {
@@ -148,6 +180,7 @@ public class MedicationController {
 	
 	
 
+
 		//if(newMedication==null) {
 			//newMedication = new Medication(medicationName, dosageUnits, dosageAmount, medicationType,
 					//frequency, instructions, doctor, pharmacy, alertName);
@@ -157,6 +190,7 @@ public class MedicationController {
 	//}
 
 //}
+
 
 
 

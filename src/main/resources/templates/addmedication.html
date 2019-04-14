@@ -1,24 +1,17 @@
-
-
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title >All Active Medications</title>
+	<title >Add New Medications</title>
 	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
 	
 </head>
 <body>	
-	<h1>List of All Active Medications</h1>
-	
-	
-	<div th:each="medication: ${medications}" >
-		<p><a th:href="@{/medication(id=${medication.id})}" th:text="${medication.medicationName}"></a></p>
-	</div>
-	
 
-	 <form method= "POST" action = "/addmedication">
+	<h1>Add New Medication</h1>
 
+
+<form method= "POST" action = "/addmedication">
 		<div>
 		<label>Enter Medication Name:</label>
 		<input type="text" name="medicationName" />
@@ -46,7 +39,7 @@
 			<option value="Cream"></option>
 		</select>
 		</div>
-
+			
 		<div>
 		<label>Enter Frequency:</label>
 		<select name="frequency">
@@ -66,7 +59,6 @@
 		</div>
 		
 		<div>
-
 		<label>Enter Medication Count:</label>
 		<input type="text" name="medicationType" placeholder="ex: Until next refil" />
 		</div>
@@ -83,40 +75,42 @@
 		</div>
 		
 
-
+		
 		<!--  <div>
 		<label>Enter Prescribing Doctor:</label>
 		<input type="text" name="doctorName" />
-		</div>
 
+		</div>
 		
 		<div>
 		<label>Enter Pharmacy:</label>
-		<input type="text" name="pharmacyName" />
-		<input type="text" name="pharmacyName" />
 
+		<input type="text" name="pharmacy" />
+
+		<input type="text" name="pharmacyName" />
 
 		</div>
 		
 		<div>
 		<label>Enter Alert:</label>
 		<input type="text" name="alertName" />
-		</div>-->
+
+		</div>
 		
 		<div>
-		<button type="submit"> add medication</button>
-		</div>		
+		<button th:formaction="@{add-medication}"> add medication</button>
 
+		</div>-->
 		
 		<div>
 		<button type="submit">Add Medication</button>
 
 		</div>
-
 	
 	</form>
 	
 	<a href ="http://localhost:8080/home-page">Back to Home</a>
-	<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+	<footer></footer>
+	  <script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
 </body>
 </html>
