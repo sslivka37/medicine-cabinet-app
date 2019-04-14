@@ -13,6 +13,12 @@
 		<p th:id = "frequencyCheck" th:text="${medication.frequency}"></p>
 		<p th:id = "timeCheck" th:text = "${medication.timeToTakeMedication}"></p>
 	</div>
+
+	<script>
+    var listOfMedications = [[${medications}]];
+    var medicationToShowToday = document.getElementById("eachMedicationForToday");
+    var medicationFrequency = document.getElementById("frequencyCheck");
+	</script>
 	
 	<p><a href ="http://localhost:8080/show-medications">Back to All Medications</a></p>
 	<p><a href ="http://localhost:8080/home-page">Back to Home</a></p>	
