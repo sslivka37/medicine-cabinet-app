@@ -107,8 +107,8 @@ public class MedicationControllerTest {
 		int count = 0;
 		String instructions = "instructions";
 		
-		underTest.addMedication(medicationName, dosageUnits, dosageAmount, medicationType, frequency, count, timeToTakeMedication, instructions, doctorName, pharmacyName, alertName);
-		Medication newMedication = new Medication("new Medication", "mL", 1.1,"medication type", "daily", 0, timeToTakeMedication, "instructions", newDoctor, newPharmacy, newAlert);
+		underTest.addMedication(medicationName, dosageUnits, dosageAmount, medicationType, frequency, instructions, doctorName);
+		Medication newMedication = new Medication("new Medication", "mL", 1.1,"medication type", "daily", "0", timeToTakeMedication, "instructions", newDoctor, newPharmacy, newAlert);
 		when(medicationRepo.save(newMedication)).thenReturn(newMedication);
 		
 		
