@@ -30,9 +30,11 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+    compile 'mysql:mysql-connector-java'
     compile("org.springframework:spring-jdbc")
 
-
+compile files('lib/ojdbc7.jar')
+sql 'mysql:mysql-connector-java:5.1.16'
 }
 
 
