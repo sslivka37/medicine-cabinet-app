@@ -1,5 +1,6 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -12,7 +13,6 @@ import javax.persistence.Table;
 import org.springframework.data.annotation.Transient;
 
 @Entity
-@Table(name="user")
 public class User {
 	
 	@Id
@@ -109,7 +109,7 @@ private Set<Role> roles;
 		return roles;
 	}
 	
-	public void setRoles(Set<Role> roles) {
+	public void setRoles(HashSet<Role> roles) {
 		this.roles=roles;
 	}
 

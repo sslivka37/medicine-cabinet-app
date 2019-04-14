@@ -12,8 +12,8 @@ public class RegistrationController {
 	@Resource
 	RegistrationRepository registrationRepo; 
 
-	@RequestMapping("/register")
-	public String registerPage(Model model) {
-		return "registerPage";
-	}
+//	@RequestMapping("/register")
+//	public String registerPage(Model model) {
+//		return "registerPage";
+//	}
 }

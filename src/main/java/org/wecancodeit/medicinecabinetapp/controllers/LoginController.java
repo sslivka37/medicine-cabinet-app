@@ -12,17 +12,17 @@ public class LoginController {
 	
 	
   
-  @RequestMapping(value = "/user-login", method = RequestMethod.GET)
-  public String loginPage(Model model) {
-	  return "user-login";
-  }
-  
-  @RequestMapping(value = "/loginSucessful", method = RequestMethod.POST)
-  public String loginSuccessful(Model model) {
-	  return "loginSuccessful";
-  }
- 
-		  
+//  @RequestMapping(value = "/user-login", method = RequestMethod.GET)
+//  public String loginPage(Model model) {
+//	  return "user-login";
+//  }
+//  
+//  @RequestMapping(value = "/loginSucessful", method = RequestMethod.POST)
+//  public String loginSuccessful(Model model) {
+//	  return "loginSuccessful";
+//  }
+// 
+//		  
 
 		 
 }

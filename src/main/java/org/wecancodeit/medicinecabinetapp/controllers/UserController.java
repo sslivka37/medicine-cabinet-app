@@ -35,7 +35,7 @@ public class UserController {
 	public String registration(Model model) {
 		model.addAttribute("userForm", new User());
 
-		return "registerPage";
+		return "register";
 	}
 
 	@PostMapping("/registration")
@@ -43,7 +43,7 @@ public class UserController {
 		userValidator.validate(userForm, bindingResult);
 
 		if (bindingResult.hasErrors()) {
-			return "registerPage";
+			return "register";
 		}
 
 		userService.save(userForm);

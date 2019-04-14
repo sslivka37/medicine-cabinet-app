@@ -3,10 +3,15 @@ package org.wecancodeit.medicinecabinetapp.base.classes;
 
 
 import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+
 import java.time.LocalDateTime;
 
 
@@ -30,6 +35,10 @@ public class Alert {
 	@ManyToMany(mappedBy = "alerts")
 	private Collection <Medication> medications;
 	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(unique=true)
+	private Reminder reminder;
+
 	
 	//should alerts be mapped to user also or just medications?
 	
@@ -45,6 +54,7 @@ public class Alert {
 		this.timeToSendAlert = timeToSendAlert;
 		this.dosageUnits = dosageUnits;
 		this.dosageType = dosageType;
+		
 		
 		
 				
