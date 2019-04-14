@@ -14,3 +14,17 @@ window.onclick = function(event) {
 		}
 	}
 }
+
+//function to show daily medications in medication for today template
+var listOfMedications = [[${medications}]]
+var medicationToShowToday = document.getElementById("eachMedicationForToday");
+var medicationFrequency = document.getElementById("frequencyCheck");
+
+function showDaily(){
+	for(i = 0; i<listOfMedications.length; i++){
+	if (medicationFrequency === "daily" || medicationFrequency === "Every 4 Hours" || medicationFrequency ==="Every 8 Hours" || medicationFrequency ==="Every 12 Hours"){
+		medicationToShowToday.style.display ="block";
+	} else {
+		medicationToShowToday.style.display ="none";
+	}
+}}
