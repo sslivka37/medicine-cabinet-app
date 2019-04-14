@@ -52,7 +52,7 @@ public class MedicationsJPAMappingsTest {
 			
 			LocalTime timeToTakeMedication = LocalTime.NOON;
 			
-			Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", 0, timeToTakeMedication, "instructions",doctor, pharmacy));
+			Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", "0", timeToTakeMedication, "instructions",doctor, pharmacy));
 			long medId = medication.getId();
 			
 			entityManager.flush();
@@ -71,7 +71,7 @@ public class MedicationsJPAMappingsTest {
 			
 			LocalTime timeToTakeMedication = LocalTime.NOON;
 			
-			Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", 0, timeToTakeMedication, "instructions",doctor, pharmacy));
+			Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", "0", timeToTakeMedication, "instructions",doctor, pharmacy));
 			long medId = medication.getId();
 			
 			entityManager.flush();
@@ -88,7 +88,7 @@ public class MedicationsJPAMappingsTest {
 			
 			LocalTime timeToTakeMedication = LocalTime.NOON;
 								
-			Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", 0, timeToTakeMedication, "instructions",doctor, pharmacy));			
+			Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", "0", timeToTakeMedication, "instructions",doctor, pharmacy));			
 			long medicationId = medication.getId();
 			
 			
@@ -109,7 +109,7 @@ public class MedicationsJPAMappingsTest {
 			
 			LocalTime timeToTakeMedication = LocalTime.NOON;
 								
-			Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", 0, timeToTakeMedication,"instructions",doctor, pharmacy));			
+			Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", "0", timeToTakeMedication,"instructions",doctor, pharmacy));			
 			long medicationId = medication.getId();
 			
 			entityManager.flush();
