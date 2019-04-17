@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-
 import org.springframework.data.annotation.Transient;
 
 @Entity
@@ -66,7 +64,7 @@ private Set<Role> roles;
 		this.firstName=firstName;
 	}
 	
-	public String lastName() {
+	public String getLastName() {
 		return lastName;
 	}
 	public void setLastname(String lastName) {
@@ -113,6 +111,7 @@ private Set<Role> roles;
 		this.roles=roles;
 	}
 
+		
 }
 
 
