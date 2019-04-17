@@ -107,6 +107,7 @@ public class MedicationController {
 
 
 
+
 		
 	
 	//@RequestMapping("/add-medication")
@@ -116,6 +117,7 @@ public class MedicationController {
 		
 	//		Alert alert = alertRepo.findByName(alertName);
 	//		Medication newMedication = medicationRepo.findByName(medicationName);
+
 
 	
 	//public String addMedication(String medicationName, String dosageUnits, double dosageAmount, String medicationType,
@@ -138,10 +140,23 @@ public class MedicationController {
 			//String frequency, String instructions, String doctorName, String pharmacyName,
 			//String alertName) {
 
+
+		
+	
+	//@RequestMapping("/add-medication")
+	//public String addMedication(String medicationName, String dosageUnits, double dosageAmount, String medicationType,
+			//String frequency, String instructions, Doctor doctor, Pharmacy pharmacy,
+			//Alert alertName) {
+		
+			//Alert alert = alertRepo.findByName(alertName);
+			//Medication newMedication = medicationRepo.findByName(medicationName);
+
+
 		
 		//Alert alert = alertRepo.findByName(alertName);
 		//Medication newMedication = medicationRepo.findByName(medicationName);
 		
+
 
 	//	if(newMedication==null) {
 	//		newMedication = new Medication(medicationName, dosageUnits, dosageAmount, medicationType,
@@ -153,6 +168,7 @@ public class MedicationController {
 
 //}
 
+
 		
 		//if(newMedication==null) {
 			//newMedication = new Medication(medicationName, dosageUnits, dosageAmount, medicationType,
@@ -163,6 +179,18 @@ public class MedicationController {
 	//}
 	
 	
+
+
+		//if(newMedication==null) {
+			//newMedication = new Medication(medicationName, dosageUnits, dosageAmount, medicationType,
+					//frequency, instructions, doctor, pharmacy, alertName);
+			//medicationRepo.save(newMedication);
+		//}
+		//return "redirect:/show-medications";
+	//}
+
+//}
+
 
 
 

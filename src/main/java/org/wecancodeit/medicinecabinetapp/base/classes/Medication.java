@@ -8,6 +8,7 @@ import java.util.HashSet;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import java.time.LocalTime;
@@ -28,7 +29,11 @@ public class Medication {
 	private double dosageAmount;
 	private String medicationType;
 	private String frequency;
+	
+	@Lob
 	private String instructions;
+	
+	
 	private String count;
 	private LocalTime timeToTakeMedication;
 	

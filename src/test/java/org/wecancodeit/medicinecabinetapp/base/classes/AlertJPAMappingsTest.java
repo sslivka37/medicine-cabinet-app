@@ -84,7 +84,7 @@ public class AlertJPAMappingsTest {
 		Alert alert1 = alertRepo.save(new Alert("alert", false, 1, "pill", null));
 		Alert alert2 = alertRepo.save(new Alert("alert", false, 1, "pill", null));
 		
-		Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", 0, timeToSendAlert,"instructions",doctor, pharmacy, alert1, alert2));
+		Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", "0", timeToSendAlert,"instructions",doctor, pharmacy, alert1, alert2));
 		long medicationId = medication.getId();
 		
 	
