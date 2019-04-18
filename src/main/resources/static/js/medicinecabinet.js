@@ -1,5 +1,7 @@
 function myFunction() {
 	document.getElementById("myDropdown").classList.toggle("show");
+
+
 }
 
 window.onclick = function(event) {
@@ -15,6 +17,15 @@ window.onclick = function(event) {
 	}
 }
 
+ var listOfMedications = [[${medications}]];
+    var medicationToShowToday = document.getElementById("eachMedicationForToday");
+    var medicationFrequency = document.getElementById("frequencyCheck");
+
+    medicationFrequency.
+
+
+
+
 //function to show daily medications in medication for today template
 //var listOfMedications = [[${medications}]]
 //var medicationToShowToday = document.getElementById("eachMedicationForToday");
@@ -22,8 +33,9 @@ window.onclick = function(event) {
 
 function showIfDaily(){
 	
-	if (medicationFrequency === "daily"){
+	if (medicationFrequency.innerText(); === "daily"){
 		medicationToShowToday.style.display ="block";
+		alert(test);
 	} else {
 		medicationToShowToday.style.display ="none";
 	}
@@ -31,7 +43,7 @@ function showIfDaily(){
 
 
 function showIfEveryFourHours(){
-	if (medicationFrequency ==="Every 4 Hours"){
+	if (medicationFrequency.innerText() ==="Every 4 Hours"){
 		medicationToShowToday.style.display = "block";
 	}else{
 		medicationToShowToday.style.display = "none";
