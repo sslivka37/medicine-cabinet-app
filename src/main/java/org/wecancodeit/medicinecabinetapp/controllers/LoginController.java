@@ -27,12 +27,12 @@ public class LoginController {
 //  return "user-login";
 //  }
 // 
-// @RequestMapping(value = "/loginSucessful", method = RequestMethod.POST)
-//  public String loginSuccessful(Model model) {
-//	  return "loginSuccessful";
-//  }
+ @RequestMapping(value = "/user-login", method = RequestMethod.POST)
+public String loginSuccessful(Model model) {
+  return "loginSuccessful";
+ }
+}
 // 
 //		  
 //
 //		 
-}

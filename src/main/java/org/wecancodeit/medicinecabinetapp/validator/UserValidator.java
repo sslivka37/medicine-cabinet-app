@@ -23,17 +23,17 @@ public class UserValidator implements Validator{
 	    public void validate(Object o, Errors errors) {
 	        User user = (User) o;
 
-	        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
+	        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userName", "NotEmpty");
 	        if (user.getUserName().length() < 6 || user.getUserName().length() > 32) {
-	            errors.rejectValue("username", "Size.userForm.username");
+	            errors.rejectValue("userName", "Size.userForm.userName");
 	        }
 	        if (userService.findByUsername(user.getUserName()) != null) {
-	            errors.rejectValue("username", "Duplicate.userForm.username");
+	            errors.rejectValue("userName", "Duplicate.userForm.userName");
 	        }
 
-	        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
+	        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userPassword", "NotEmpty");
 	        if (user.getUserPassword().length() < 8 || user.getUserPassword().length() > 32) {
-	            errors.rejectValue("password", "Size.userForm.password");
+	            errors.rejectValue("userPassword", "Size.userForm.userPassword");
 	        }
 
 	        if (!user.getPasswordConfirm().equals(user.getUserPassword())) {

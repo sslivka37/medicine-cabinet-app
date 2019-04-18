@@ -2,6 +2,8 @@ package org.wecancodeit.medicinecabinetapp.controllers;
 
 import javax.annotation.Resource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,8 @@ import org.wecancodeit.medicinecabinetapp.validator.UserValidator;
 
 @Controller
 public class RegistrationController {
+	
+	private Logger logger=LoggerFactory.getLogger(RegistrationController.class);
 	
 	@Resource
 	RegistrationRepository registrationRepo; 
@@ -49,6 +53,7 @@ public class RegistrationController {
 
 	@PostMapping("/registration")
 	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
+		String passwordConfirm=userForm.getPasswordConfirm();
 		userValidator.validate(userForm, bindingResult);
 
 		if (bindingResult.hasErrors()) {
@@ -57,18 +62,19 @@ public class RegistrationController {
 
 		userService.save(userForm);
 
-		securityService.autoLogin(userForm.getUserName(), userForm.getPasswordConfirm());
+		securityService.autoLogin(userForm.getUserName(), passwordConfirm);
 
 		User user=new User();
-		user.setFirstName(null);
-		user.getLastName();
-		user.getUserEmail();
+		user.setFirstName("add");
+		user.setLastName("ddd");
+		user.setUserEmail("anicgarr@gmail.com");
 		
 		try {
-		emailService.sendEmailAlert(user);
+		emailService.sendRegistrationAlert(user);
 		
 	}catch(MailException e) {
 		
+		logger.info("Error Sending Email:"+ e.getMessage());
 	}
 		return "medicinecabinet";
 	}

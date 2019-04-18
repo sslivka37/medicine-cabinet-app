@@ -25,7 +25,19 @@ public class EmailService {
         mail.setTo(user.getUserEmail());
         mail.setFrom("yourmedcabapp@gmail.com");
         mail.setSubject("Time to take your meds");
-        mail.setText("Hi this is med notification");
+        mail.setText("Hi this is a med notification");
+        
+        javaMailSender.send(mail);
+        
+    }
+	
+	public void sendRegistrationAlert(User user) throws MailException {
+		//send email
+		SimpleMailMessage mail = new SimpleMailMessage();
+        mail.setTo(user.getUserEmail());
+        mail.setFrom("yourmedcabapp@gmail.com");
+        mail.setSubject("Thanks for registering with Medicine Cabinet");
+        mail.setText("Your're registered");
         
         javaMailSender.send(mail);
         

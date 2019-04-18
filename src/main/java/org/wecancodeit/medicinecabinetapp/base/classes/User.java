@@ -67,7 +67,7 @@ private Set<Role> roles;
 	public String getLastName() {
 		return lastName;
 	}
-	public void setLastname(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName=lastName;
 	}
 	
@@ -110,6 +110,8 @@ private Set<Role> roles;
 	public void setRoles(HashSet<Role> roles) {
 		this.roles=roles;
 	}
+
+	
 
 		
 }
