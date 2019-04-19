@@ -1,5 +1,16 @@
-var medications = document.getElementsByClassName("meds");
-var timeTakeMedication = medications.getElementById("timeCheck");
+console.log("start");
+var medtimes = document.querySelectorAll(".frequencyCheck");
+
+function hideTimes() {
+  medtimes.forEach(m => {
+    if (m.innerText === "weekly") {
+      m.parentNode.style.display = "none";
+      console.log("hidden");
+    }
+  });
+}
+hideTimes();
+
 //  var listOfMedications = ['[$[medications]'];
 
 //     var medicationToShowToday = document.getElementById("eachMedicationForToday");
@@ -12,14 +23,14 @@ var timeTakeMedication = medications.getElementById("timeCheck");
 //var medicationToShowToday = document.getElementById("eachMedicationForToday");
 //var medicationFrequency = document.getElementById("frequencyCheck");
 
-function isToday() {
-  var i;
-  for (i = 0; i < medications.length; i++) {
-    if (timeTakeMedication.innerText.contains("show")) {
-      openDropdown.classList.remove("show");
-    }
-  }
-}
+// function isToday() {
+//   var i;
+//   for (i = 0; i < medications.length; i++) {
+//     if (timeTakeMedication.innerText.contains("show")) {
+//       openDropdown.classList.remove("show");
+//     }
+//   }
+// }
 
 function showIfDaily() {
   if (medicationFrequency.innerText() === "daily") {
