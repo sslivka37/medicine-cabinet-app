@@ -4,12 +4,11 @@ package org.wecancodeit.medicinecabinetapp.base.classes;
 
 
 import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import java.time.LocalDateTime;
-
 
 
 
@@ -27,8 +26,10 @@ public class Alert {
 	private int dosageUnits;
 	private String dosageType;
 	
-	private LocalDateTime timeToSendAlert;
-	
+	int dayToSendAlert;
+	int timeToSendAlertHour;
+	int timeToSendAlertMinute;
+
 	@ManyToMany(mappedBy = "alerts")
 	private Collection <Medication> medications;
 	
@@ -38,17 +39,19 @@ public class Alert {
 	
 	 public Alert (){
 		
-	}
 	
+	 }
 	
-	public Alert(String name, boolean taken, int dosageUnits, String dosageType, LocalDateTime timeToSendAlert) {
+	public Alert(String name, boolean taken, int dosageUnits, String dosageType, int dayToSendAlert, int timeToSendAlertHour, int timeToSendAlertMinute) {
 		this.name = name;
 		this.taken = taken;
-		this.timeToSendAlert = timeToSendAlert;
+		this.dayToSendAlert=dayToSendAlert;
+		this.timeToSendAlertHour = timeToSendAlertHour;
+		this.timeToSendAlertMinute=timeToSendAlertMinute;
 		this.dosageUnits = dosageUnits;
 		this.dosageType = dosageType;
 		
-		
+			
 				
 	}
 
@@ -81,13 +84,12 @@ public class Alert {
 		return dosageType;
 	}
 	
-	public Object getTimeToSendAlert() {
-		return timeToSendAlert;
-	}
-
-	public Collection <Medication> getMedications() {		
+		public Collection <Medication> getMedications() {		
 		return medications;
 	}
+
+	
+	
 
 	@Override
 	public int hashCode() {
@@ -110,6 +112,35 @@ public class Alert {
 			return false;
 		return true;
 	}
+
+
+	public int getTimeToSendAlertHour() {
+		return timeToSendAlertHour;
+	}
+
+
+	public void setTimeToSendAlertHour(int timeToSendAlertHour) {
+		this.timeToSendAlertHour = timeToSendAlertHour;
+	}
+
+
+	public int getTimeToSendAlertMinute() {
+		return timeToSendAlertMinute;
+	}
+
+
+	public void setTimeToSendAlertMinute(int timeToSendAlertMinute) {
+		this.timeToSendAlertMinute = timeToSendAlertMinute;
+	}
+
+	public int getDayToSendAlert() {
+		return dayToSendAlert;
+	}
+
+	public void setDayToSendAlert(int dayToSendAlert) {
+		this.dayToSendAlert = dayToSendAlert;
+	}
+
 
 	
 	

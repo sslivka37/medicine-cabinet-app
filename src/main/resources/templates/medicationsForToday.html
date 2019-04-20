@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-	<title >Today's Medications</title>
-	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
-</head>
-<body>	
-	<h1>List of Medications Due Today</h1>
-	
-	
-	<div th:id="eachMedicationForToday" th:each="medication: ${medications}" >
-		<p><a th:href="@{/medication(id=${medication.id})}" th:text="${medication.medicationName}" ></a></p>
-		<p th:id = "frequencyCheck" th:text="${medication.frequency}"></p>
-		<p th:id = "timeCheck" th:text = "${medication.timeToTakeMedication}"></p>
-	</div>
 
-	<script>
-    var listOfMedications = [[${medications}]];
-    var medicationToShowToday = document.getElementById("eachMedicationForToday");
-    var medicationFrequency = document.getElementById("frequencyCheck");
-	</script>
-	
-	<p><a href ="http://localhost:8080/show-medications">Back to All Medications</a></p>
-	<p><a href ="http://localhost:8080/home-page">Back to Home</a></p>	
-</body>
-<footer></footer>
-<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+  <head>
+    <title>Today's Medications</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./medicinecabinet.css"
+      th:href="@{css/medicinecabinet.css}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./viewmedications.css"
+      th:href="@{css/viewmedications.css}"
+    />
+  </head>
+  <body>
+    <h1>List of Medications Due Today</h1>
+
+
+    <div
+      class="meds"
+      th:id="eachMedicationForToday"
+      th:each="medication: ${medications}"
+    >
+      <p class="eachMed">
+        <a
+          th:href="@{/medication(id=${medication.id})}"
+          th:text="${medication.medicationName}"
+        ></a>
+      </p>
+      <p th:class="frequencyCheck" th:text="${medication.frequency}"></p>
+      <p th:class="timeCheck" th:text="${medication.timeToTakeMedication}"></p>
+    </div>
+
+    <p>
+      <a href="http://localhost:8080/show-medications">Back to All Medications</a>
+    </p>
+    <p><a href="http://localhost:8080/home-page">Back to Home</a></p>
+
+
+    <script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </body>
+  <footer></footer>
 </html>
+

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+
 	<title>Medicine Cabinet</title>
 	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+
 </head>
 
 <body>
 <header>
-	<h1>Medicine Cabinet</h1>
-	<span></span>
+    <h1>Medicine Cabinet</h1>
+    <span></span>
 </header>
 <main>
+
 	<section id="welcomeStatement">
 			<h2>Welcome</h2>
 			<div id="welcome">
@@ -30,7 +33,6 @@
 				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
 				<a href="http://localhost:8080/show-alerts">View Alerts</a>
 				<a href="http://localhost:8080/add-medication">Add Medications</a>
-				<a href="#addReminder">Add Alerts</a>
 				<a href="#medicalDisclaimer">Disclaimer</a>
 			</div>
 	</div>	
@@ -47,6 +49,7 @@
 		</div>
 		</section>
 	</footer>
-	  <script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+	  <script type="text/javascript" th:src="@{/js/home-page.js}"></script>
+
 </body>
 </html>
