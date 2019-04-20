@@ -1,11 +1,9 @@
-
-
 console.log("start");
 var medtimes = document.querySelectorAll(".frequencyCheck");
 
 function hideTimes() {
   medtimes.forEach(m => {
-    if (m.innerText === "weekly") {
+    if (m.innerText === "Weekly") {
       m.parentNode.style.display = "none";
       console.log("hidden");
     }
