@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 
-    <title>Medicine Cabinet</title>
-    <link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+	<title>Medicine Cabinet</title>
+	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
 
 </head>
 
@@ -13,23 +13,43 @@
     <span></span>
 </header>
 <main>
-    
+
+	<section id="welcomeStatement">
+			<h2>Welcome</h2>
+			<div id="welcome">
+				<article>
+					<p>Welcome to the Medicine Cabinet. Here you can enter all of your medications to help you keep track of all of the important details. The Medicine Cabinet allows you to enter the Doctor and Pharmacy for a particular medication. In addition it also tracks the dosage details and allows you to set up email alerts to help remind you to take your medications. </p>
+				</article>
+			</div>
+		</section>
+	
 </main>
 
 <nav>
-    <div class="dropdowm">
-        <button onclick="myFunction()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class= "dropdown-content">
-                <a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
-                <a href="http://localhost:8080/show-medications">View All Active Medications</a>
-                <a href="http://localhost:8080/show-alerts">View Alerts</a>
-                <a href="http://localhost:8080/add-medication">Add Medications</a>
-                <a href="#addReminder">Add Alerts</a>
-                <a href="#disclaimer">Disclaimer</a>
-            </div>
-    </div>    
+	<div class="dropdowm">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class= "dropdown-content">
+				<a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
+				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
+				<a href="http://localhost:8080/show-alerts">View Alerts</a>
+				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="#medicalDisclaimer">Disclaimer</a>
+			</div>
+	</div>	
 </nav>
-    <footer></footer>
-      <script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+
+		
+	<footer>
+		<section id="medicalDisclaimer">
+		<h2>Medical Disclaimer</h2>
+		<div id="disclaimer">
+			<article>
+				<p>All content found on the Medicine Cabinet App was created for informational purposes only. This content in not intended to be a substitute for professional medical advice, diagnosis, or treatmnet. Always seek the advice of a qualified medical professional with any questions you may have regarding any medical conditions/medications. This information is not intended to take the place of your medical professional. In the event you experience a medical emergency, call your doctor, go to the emergency deaprtment, or call 911 immediately.</p>
+			</article>
+		</div>
+		</section>
+	</footer>
+	  <script type="text/javascript" th:src="@{/js/home-page.js}"></script>
+
 </body>
 </html>

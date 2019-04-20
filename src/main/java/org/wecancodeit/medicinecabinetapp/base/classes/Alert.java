@@ -60,6 +60,11 @@ public class Alert {
 		return id;
 	}
 
+	public void setAlertName(String name) {
+		this.name = name;
+	}
+	
+	
 	
 	public String getName() {
 		return name;

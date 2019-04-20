@@ -23,7 +23,9 @@ import org.wecancodeit.medicinecabinetapp.base.classes.Medication;
 import org.wecancodeit.medicinecabinetapp.base.classes.Pharmacy;
 import org.wecancodeit.medicinecabinetapp.exceptions.MedicationNotFoundException;
 import org.wecancodeit.medicinecabinetapp.repositories.AlertRepository;
+import org.wecancodeit.medicinecabinetapp.repositories.DoctorRepository;
 import org.wecancodeit.medicinecabinetapp.repositories.MedicationRepository;
+import org.wecancodeit.medicinecabinetapp.repositories.PharmacyRepository;
 
 public class MedicationControllerTest {
 	
@@ -42,6 +44,12 @@ public class MedicationControllerTest {
 	
 	@Mock
 	private AlertRepository alertRepo;
+	
+	@Mock
+	private DoctorRepository doctorRepo;
+	
+	@Mock
+	private PharmacyRepository pharmacyRepo;
 	
 	@Mock
 	private Alert alert;
@@ -77,25 +85,57 @@ public class MedicationControllerTest {
 				
 	}
 	
+	//as of right now, the test below passes
+	
 	@Test
 	public void Should_Add_Additional_Medications_To_Model() {
-		String alert = "alert name";
+		String alertName = "alert name";
+		Alert newAlert = alertRepo.findByName(alertName);
+		
+		String doctorName = "doctor Name";
+		Doctor newDoctor = doctorRepo.findByName(doctorName);
+		
+		String pharmacyName = "pharmacy name";
+		Pharmacy newPharmacy = pharmacyRepo.findByName(pharmacyName);
+		
+		String medicationName = "new Medication";
+		String dosageUnits ="mL";
+		Double dosageAmount = 1.1;
+		String medicationType = "medication type";
+		LocalTime timeToTakeMedication = LocalTime.NOON;
+		String frequency = "daily";
+		int count = 0;
+		String instructions = "instructions";
+		
+		underTest.addMedication(medicationName, dosageUnits, dosageAmount, medicationType, frequency, instructions, doctorName);
+		Medication newMedication = new Medication("new Medication", "mL", 1.1,"medication type", "daily", "0", timeToTakeMedication, "instructions", newDoctor, newPharmacy, newAlert);
+		when(medicationRepo.save(newMedication)).thenReturn(newMedication);
+		
+		
+		
+		
+		
+		//old test
+		
+		
+		
+		//String alert = "alert name";
 		//Alert newAlert = alertRepo.findByName(alert);
 		
-		String medicationName = ("foo");
-		String dosageUnits = ("foo");
-		double dosageAmount = (0.00);
-		String medicationType = "foo";
-		String frequency = "new frequency";
-		int count = 0;
+		//String medicationName = ("foo");
+		//String dosageUnits = ("foo");
+		//double dosageAmount = (0.00);
+		//String medicationType = "foo";
+		//String frequency = "new frequency";
+		//int count = 0;
 		
-		String instructions = ("new instructions");
-		Doctor doctor = new Doctor() ;
-		Pharmacy pharmacy = new Pharmacy();
-		Alert alertName = new Alert();
-		underTest.addMedication(medicationName, dosageUnits, dosageAmount, medicationType, frequency, instructions, doctor, pharmacy, alertName);
-		Medication newMedication = new Medication(instructions, instructions, dosageAmount, instructions, instructions, instructions, doctor, pharmacy, null);
-		when(medicationRepo.save(newMedication)).thenReturn(newMedication);
+		//String instructions = ("new instructions");
+		//Doctor doctor = new Doctor("name", "phone");
+		//Pharmacy pharmacy = new Pharmacy("pharmacy name", "address", "phone Number");
+		//Alert alertName = new Alert("alert Name", );
+		//underTest.addMedication(medicationName, dosageUnits, dosageAmount, medicationType, frequency, instructions, doctorName, pharmacyName, alertName);
+		//Medication newMedication = new Medication(instructions, instructions, dosageAmount, instructions, instructions, instructions, doctor, pharmacy, null);
+		//when(medicationRepo.save(newMedication)).thenReturn(newMedication);
 	}
 
 

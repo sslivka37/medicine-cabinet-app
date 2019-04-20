@@ -28,6 +28,14 @@ sourceCompatibility = '1.8'
 repositories {
 	mavenCentral()
 }
+bootJar{
+	baseName = 'gs-rest-service-cors'
+	version = '0.1.0'
+}
+
+ext {
+	set('springCloudVersion', 'Greenwich.SR1')
+}
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -35,12 +43,27 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.data:spring-data-rest-hal-browser'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
     runtimeOnly 'mysql:mysql-connector-java'
   
+
+	implementation 'org.springframework.cloud:spring-cloud-starter'
+	
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+
 }
 
 
