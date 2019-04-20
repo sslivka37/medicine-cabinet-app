@@ -15,6 +15,10 @@ sourceCompatibility = '1.8'
 repositories {
 	mavenCentral()
 }
+bootJar{
+	baseName = 'gs-rest-service-cors'
+	version = '0.1.0'
+}
 
 ext {
 	set('springCloudVersion', 'Greenwich.SR1')
