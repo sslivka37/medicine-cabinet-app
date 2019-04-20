@@ -12,11 +12,9 @@
 	
 	<div th:each= "alert: ${alerts}">		
 		 
-		<p th:text = "${alert.name}"></p>
-		<p th:text = "${alert.timeToSendAlert}"></p>
+		<p th:text = "${alert.name}"></p>		
 		<p th:text = "${alert.dosageUnits}"></p>
-		<p th:text = "${alert.dosageType}"></p>
-		
+		<p th:text = "${alert.dosageType}"></p>			
 				
 	</div>	
 	

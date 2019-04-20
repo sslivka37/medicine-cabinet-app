@@ -25,14 +25,14 @@ public class AlertPopulator implements CommandLineRunner {
 		int timeToSendAlertMinute=now.get(Calendar.MINUTE);
 		
 		
-		Alert alertPill = new Alert("Pain Pill", false, 1, "pill", 6,13,35);
+		Alert alertPill = new Alert("Ibuprofen", false, 2, "pill", 6,13,35);
 		alertPill = alertRepo.save(alertPill);
 		
-		Alert alertLiquid = new Alert("Liquid Medicine", false, 50, "mL",6,13,36);
-		alertLiquid = alertRepo.save(alertLiquid);
+		Alert alertPill2 = new Alert("Aspirin", false, 1, "pill",6,13,36);
+		alertPill2 = alertRepo.save(alertPill2);
 
-		Alert alertPatch = new Alert("Patch", false, 1, "patch",6,13,37);
-		alertPatch = alertRepo.save(alertPatch);
+		Alert alertLiquid = new Alert("Nyquil", false, 30, "mL",6,13,37);
+		alertLiquid = alertRepo.save(alertLiquid);
 	}
 	
 	
