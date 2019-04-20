@@ -13,13 +13,13 @@
 	<div th:each= "alert: ${alerts}">		
 		 
 		<p th:text = "${alert.name}"></p>
-		<p th:text = "${alert.timeToSendAlert}"></p>
 		<p th:text = "${alert.dosageUnits}"></p>
 		<p th:text = "${alert.dosageType}"></p>
 		
 				
 	</div>	
 	
+
 	<a href ="http://localhost:8080/show-alerts">Back to Alerts</a>
 	<a href ="http://localhost:8080/home-page">Back to Home</a>
 	

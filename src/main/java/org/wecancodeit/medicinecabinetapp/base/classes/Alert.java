@@ -59,7 +59,8 @@ public class Alert {
 	public long getId() {
 		return id;
 	}
-
+	
+	
 	public void setAlertName(String name) {
 		this.name = name;
 	}

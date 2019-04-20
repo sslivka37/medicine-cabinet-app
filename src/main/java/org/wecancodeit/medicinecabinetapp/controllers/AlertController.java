@@ -4,6 +4,7 @@ package org.wecancodeit.medicinecabinetapp.controllers;
 import java.util.Calendar;
 import java.util.Optional;
 import javax.annotation.Resource;
+import javax.persistence.EntityManager;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,7 @@ import org.wecancodeit.medicinecabinetapp.base.classes.User;
 import org.wecancodeit.medicinecabinetapp.exceptions.AlertNotFoundException;
 import org.wecancodeit.medicinecabinetapp.repositories.AlertRepository;
 import org.wecancodeit.medicinecabinetapp.service.EmailService;
+
 
 @Controller
 public class AlertController {
@@ -33,18 +35,18 @@ public class AlertController {
 		if (alert.isPresent()) {
 			model.addAttribute("alerts", alert.get());
 
-			User user = new User();
-			user.setFirstName("Sally");
-			user.setLastName("Sue");
-			user.setUserEmail("anicgarr@gmail.com");
-
-			try {
-				EmailService.sendEmailAlert(user);
-
-			} catch (MailException e) {
-
-				logger.info("Error Sending Email:" + e.getMessage());
-			}
+//			User user = new User();
+//			user.setFirstName("Sally");
+//			user.setLastName("Sue");
+//			user.setUserEmail("anicgarr@gmail.com");
+//
+//			try {
+//				EmailService.sendEmailAlert(user);
+//
+//			} catch (MailException e) {
+//
+//				logger.info("Error Sending Email:" + e.getMessage());
+//			}
 			return "alert";
 		}  {
 			
@@ -64,5 +66,23 @@ public class AlertController {
 	
 
 }
+	@RequestMapping("/delete-alert")
+	public String deleteAlertByName(String name) {
+		
+		if(alertRepo.findByName(name) !=null) {
+			Alert deletedAlert=alertRepo.findByName(name);
+			alertRepo.delete(deletedAlert);
+		}
+		return "redirect:/show-alerts";
 
+	}
+
+	@RequestMapping("/del-alert")
+	public String deleteAlertwById(Long id) {
+	
+		alertRepo.deleteById(id);
+
+		return "redirect:/show-alerts";
+	}	
+	
 }
