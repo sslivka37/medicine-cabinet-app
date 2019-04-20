@@ -8,6 +8,12 @@
       href="./medicinecabinet.css"
       th:href="@{css/medicinecabinet.css}"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./viewmedications.css"
+      th:href="@{css/viewmedications.css}"
+    />
   </head>
   <body>
     <h1>List of Medications Due Today</h1>
@@ -17,7 +23,7 @@
       th:id="eachMedicationForToday"
       th:each="medication: ${medications}"
     >
-      <p>
+      <p class="eachMed">
         <a
           th:href="@{/medication(id=${medication.id})}"
           th:text="${medication.medicationName}"
