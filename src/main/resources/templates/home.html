@@ -1,17 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-    <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>Medicine Cabinet</title>
-    </head>
-    <body>
-        <table align="center">
-            <tr>
-                <td><a href="login">Login</a>
-                </td>
-                <td><a href="register">Register</a>
-                </td>
-            </tr>
-        </table>
-    </body>
-    </html>
+<html xmlns:th="http://www.thymeleaf.org"  
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">  
+<head>  
+    <!--/*/ <th:block th:include="fragments/head :: head"/> /*/-->  
+</head>  
+<body>  
+<div class="container-fluid">  
+    <div class="row">  
+        <div class="box col-md-6 col-md-offset-3">  
+            <div class="okta-header">  
+                <img src="img/logo.png"/>  
+            </div>  
+  
+            <!--/* displayed if account IS NOT null, indicating that the user IS logged in */-->  
+            <div th:if="${#authorization.expression('isAuthenticated()')}">  
+                <h1 th:inline="text">Hello, <span th:text="${#authentication.name}"></span>!</h1>  
+            </div>  
+              
+            <!--/* displayed if account IS null, indicating that the user IS NOT logged in */-->  
+            <div th:unless="${#authorization.expression('isAuthenticated()')}">  
+                <h1>Who are you?</h1>  
+            </div>  
+  
+            <a href="/restricted" class="btn btn-primary">Restricted</a>  
+  
+        </div>  
+    </div>  
+</div>  
+</body>  
+</html>

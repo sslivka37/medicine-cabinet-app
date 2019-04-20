@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.wecancodeit.medicinecabinetapp.base.classes.Mail;
 import org.wecancodeit.medicinecabinetapp.base.classes.User;
@@ -12,15 +13,16 @@ import org.wecancodeit.medicinecabinetapp.base.classes.User;
 public class EmailService {
 
 	
-	private JavaMailSender javaMailSender;
+	private static JavaMailSender javaMailSender;
 	
+	@SuppressWarnings("static-access")
 	@Autowired
 	public EmailService(JavaMailSender javaMailSender) {
 		this.javaMailSender=javaMailSender;
 	}
 	
-	public void sendEmailAlert(User user) throws MailException {
-		//send email
+	@Async
+	public static void sendEmailAlert(User user) throws MailException {
 		SimpleMailMessage mail = new SimpleMailMessage();
         mail.setTo(user.getUserEmail());
         mail.setFrom("yourmedcabapp@gmail.com");
@@ -31,15 +33,6 @@ public class EmailService {
         
     }
 	
-	public void sendRegistrationAlert(User user) throws MailException {
-		//send email
-		SimpleMailMessage mail = new SimpleMailMessage();
-        mail.setTo(user.getUserEmail());
-        mail.setFrom("yourmedcabapp@gmail.com");
-        mail.setSubject("Thanks for registering with Medicine Cabinet");
-        mail.setText("Your're registered");
-        
-        javaMailSender.send(mail);
-        
-    }
+
+      
 }

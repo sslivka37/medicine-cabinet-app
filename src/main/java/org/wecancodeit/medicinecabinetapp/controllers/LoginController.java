@@ -21,16 +21,23 @@ public class LoginController {
 
 		return "user-login";
 	}
+	
+	@RequestMapping("/")
+	String home() {
+		return "home";
+	}
   
 // @RequestMapping(value = "/user-login", method = RequestMethod.GET)
 // public String loginPage(Model model) {
 //  return "user-login";
 //  }
 // 
- @RequestMapping(value = "/user-login", method = RequestMethod.POST)
-public String loginSuccessful(Model model) {
-  return "loginSuccessful";
- }
+// @RequestMapping(value = "/user-login", method = RequestMethod.POST)
+//public String loginSuccessful(Model model) {
+//  return "loginSuccessful";
+// }
+ 
+ 
 }
 // 
 //		  

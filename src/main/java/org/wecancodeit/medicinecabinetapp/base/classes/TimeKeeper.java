@@ -9,6 +9,11 @@ import java.awt.Toolkit;
 
 
 public class TimeKeeper {
+	Toolkit toolkit;
+	Timer timer;
+	
+	public TimerTask() {
+	
 	
 	LocalDateTime presentDateTime = LocalDateTime.now();
 	
@@ -16,4 +21,5 @@ public class TimeKeeper {
 
 	
 	
+}
 }
