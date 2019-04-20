@@ -31,11 +31,11 @@ public class ScheduledTasks {
 		Calendar now = Calendar.getInstance();
 		int hour = now.get(Calendar.HOUR_OF_DAY);
 		int minute = now.get(Calendar.MINUTE);
-		int day=now.get(Calendar.DAY_OF_WEEK);
+		int day=(now.get(Calendar.DAY_OF_WEEK)-1);
 		System.out.println(day);
 		
-		String[] strDays = new String[] { "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-				"Friday" };
+		String[] strDays = new String[] {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+				"Friday","Saturday" };
 
 			Iterable<Alert> allAlerts = alertRepo.findAll();
 System.out.println("foo");
@@ -45,7 +45,7 @@ System.out.println("foo");
 						&& (alert.timeToSendAlertHour == hour)
 						&& (alert.timeToSendAlertMinute == minute)) {
 					
-					System.out.println(strDays[now.get(Calendar.DAY_OF_WEEK)]);
+					System.out.println(strDays[now.get(Calendar.DAY_OF_WEEK)-1]);
 					System.out.println(hour);
 					System.out.println(minute);
 
