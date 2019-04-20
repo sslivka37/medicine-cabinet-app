@@ -33,18 +33,18 @@ public class AlertController {
 		if (alert.isPresent()) {
 			model.addAttribute("alerts", alert.get());
 
-			User user = new User();
-			user.setFirstName("Sally");
-			user.setLastName("Sue");
-			user.setUserEmail("anicgarr@gmail.com");
-
-			try {
-				EmailService.sendEmailAlert(user);
-
-			} catch (MailException e) {
-
-				logger.info("Error Sending Email:" + e.getMessage());
-			}
+//			User user = new User();
+//			user.setFirstName("Sally");
+//			user.setLastName("Sue");
+//			user.setUserEmail("anicgarr@gmail.com");
+//
+//			try {
+//				EmailService.sendEmailAlert(user);
+//
+//			} catch (MailException e) {
+//
+//				logger.info("Error Sending Email:" + e.getMessage());
+//			}
 			return "alert";
 		}  {
 			
