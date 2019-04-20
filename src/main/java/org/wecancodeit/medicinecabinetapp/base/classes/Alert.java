@@ -50,7 +50,6 @@ public class Alert {
 		this.timeToSendAlertMinute=timeToSendAlertMinute;
 		this.dosageUnits = dosageUnits;
 		this.dosageType = dosageType;
-		
 			
 				
 	}
@@ -88,8 +87,7 @@ public class Alert {
 		return medications;
 	}
 
-	
-	
+		
 
 	@Override
 	public int hashCode() {
@@ -143,8 +141,6 @@ public class Alert {
 
 
 	
-	
-
 	
 	
 
