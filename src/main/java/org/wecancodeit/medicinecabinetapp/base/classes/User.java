@@ -1,7 +1,12 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+
 import java.util.HashSet;
 import java.util.Set;
+
+
+
+
 
 import javax.persistence.Entity;
 
@@ -24,30 +29,36 @@ public class User {
 	private String userPhone;
 	private String userEmail;
 
+
 	
 @Transient
 private String passwordConfirm;
 
 @ManyToMany
 private Set<Role> roles;
+
 	
 	public User () {
 		
 	}
 	
-	public User(String userName, String firstName, String lastName, String userPassword, String userPhone, String userEmail) {
-		this.userName = userName;
-		this.firstName=firstName;
+
+
+	public User (String userName, String firstName, String lastName,String userPassword, String userPhone, String userEmail) {
+		this.userName=userName;
+		this.firstName = firstName;
 		this.lastName=lastName;
 		this.userPassword = userPassword;
 		this.userPhone = userPhone;
 		this.userEmail=userEmail;
 	}
+
 	
 	public long getId() {
 		return id;
 	}
 	
+
 	public String getUserName() {
 		return userName;
 	}
@@ -69,24 +80,29 @@ private Set<Role> roles;
 	}
 	public void setLastName(String lastName) {
 		this.lastName=lastName;
-	}
-	
+	}		
+		
+
 	public String getUserPassword() {
 		return userPassword;
 	}
 	
 	public void setUserPassword(String userPassword) {
+
 		this.userPassword=userPassword; 
 	}
 	
+
 	public String getUserPhone() {
 		return userPhone;
 	}
 	
+
 	public void setUserPhone(String userPhone) {
 		this.userPhone=userPhone;
 	}
 	
+
 	public String getUserEmail() {
 		return userEmail;
 	}
@@ -111,9 +127,7 @@ private Set<Role> roles;
 		this.roles=roles;
 	}
 
-	
 
-		
 }
 
 

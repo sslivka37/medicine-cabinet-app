@@ -1,8 +1,8 @@
 package org.wecancodeit.medicinecabinetapp.controllers;
 
+
 import java.util.Calendar;
 import java.util.Optional;
-
 import javax.annotation.Resource;
 
 import org.slf4j.Logger;
@@ -60,7 +60,9 @@ public class AlertController {
 		model.addAttribute("alerts", alertRepo.findAll());
 		return ("alerts");
 
+
 	
 
 }
+
 }
