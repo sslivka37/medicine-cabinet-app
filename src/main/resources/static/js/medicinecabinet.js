@@ -1,27 +1,33 @@
 function myFunction() {
-	document.getElementById("myDropdown").classList.toggle("show");
-
-
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
 window.onclick = function(event) {
-	if (!event.target.matches('.dropbtn')) {
-		var dropdowns = document.getElementsByClassName("dropdown-content");
-		var i;
-		for (i = 0; i < dropdowns.length; i++){
-			var openDropdown = dropdowns[i];
-			if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
-			}
-		}
-	}
-}
+  if (!event.target.matches(".dropbtn")) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
 
- var listOfMedications = [[${medications}]];
-    var medicationToShowToday = document.getElementById("eachMedicationForToday");
-    var medicationFrequency = document.getElementById("frequencyCheck");
+//window.onclick = function(event) {
+   // if (event.target.classList.contains('dropbtn')) {
+    //    document.querySelector(".dropdown-content").classList.toggle('show')
+   // }
+//}
 
-    medicationFrequency.
+
+
+ // var listOfMedications = [[${medications}]];
+ //    var medicationToShowToday = document.getElementById("eachMedicationForToday");
+ //    var medicationFrequency = document.getElementById("frequencyCheck");
+
+  
 
 
 
@@ -31,41 +37,48 @@ window.onclick = function(event) {
 //var medicationToShowToday = document.getElementById("eachMedicationForToday");
 //var medicationFrequency = document.getElementById("frequencyCheck");
 
-function showIfDaily(){
-	
-	if (medicationFrequency.innerText(); === "daily"){
-		medicationToShowToday.style.display ="block";
-		alert(test);
-	} else {
-		medicationToShowToday.style.display ="none";
-	}
-}
 
 
-function showIfEveryFourHours(){
-	if (medicationFrequency.innerText() ==="Every 4 Hours"){
-		medicationToShowToday.style.display = "block";
-	}else{
-		medicationToShowToday.style.display = "none";
-	}
-}
+
+    
+   
+        
+
+// function showIfDaily(){
+// 	 for (i = 0; i < listofMedications.length; i++){	
+// 		if (medicationFrequency.innerText(); === "daily"){
+// 			medicationToShowToday.style.display ="block";
+// 			alert(test);
+// 		} else {
+// 			medicationToShowToday.style.display ="none";
+// 		}
+// }}
 
 
-function showIfEveryEightHours(){
-	if(medicationFrequency === "Every 8 Hours"){
-		medicationToShowToday.style.display = "block";
-	} else {
-		medicationToShowToday.style.display = "none";
-	}
-}
+// function showIfEveryFourHours(){
+// 	if (medicationFrequency.innerText() ==="Every 4 Hours"){
+// 		medicationToShowToday.style.display = "block";
+// 	}else{
+// 		medicationToShowToday.style.display = "none";
+// 	}
+// }
 
-function showIfEveryTwelveHours(){
-	if(medicationFrequency === "Every 12 Hours"){
-		medicationToShowToday.style.display = "block";
-	} else {
-		medicationToShowToday.style.display = "none";
-	}
-}
+
+// function showIfEveryEightHours(){
+// 	if(medicationFrequency === "Every 8 Hours"){
+// 		medicationToShowToday.style.display = "block";
+// 	} else {
+// 		medicationToShowToday.style.display = "none";
+// 	}
+// }
+
+// function showIfEveryTwelveHours(){
+// 	if(medicationFrequency === "Every 12 Hours"){
+// 		medicationToShowToday.style.display = "block";
+// 	} else {
+// 		medicationToShowToday.style.display = "none";
+// 	}
+// }
 
 //functions for weekly, build out one for every day?
 

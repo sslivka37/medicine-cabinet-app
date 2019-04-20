@@ -1,0 +1,58 @@
+*{
+	font-family: sans-serif;
+	line-height: 1.618em;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: radial-gradient(ellipse at center, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(254,254,254,1) 100%);
+}
+
+
+h1, h2, h3 {
+	color: darkblue;
+}
+
+header,
+main,
+footer {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+html {
+	font-size: 16px;
+
+	margin-top: 3em;
+}
+
+header {
+	padding: 2em 0;
+}
+
+header h1 {
+	font-size: 3em;
+}
+
+header span {
+	font-size: 1.5em;
+	color: 999;
+}
+
+#eachMed{
+	font-size: 1.3em;
+	text-indent: 5%;
+
+
+}
+
+#eachMed a {
+	text-decoration: none;
+	color: #ff0000;
+}
+
+#eachMed a:hover{
+	color: darkblue;
+	background: #708090;
+}
