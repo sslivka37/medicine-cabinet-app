@@ -1,5 +1,3 @@
-
-
 console.log("start");
 var medtimes = document.querySelectorAll(".frequencyCheck");
 
