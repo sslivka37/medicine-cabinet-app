@@ -4,37 +4,48 @@
 
 <head>
 	<title>Medication</title>
-	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+	<link rel= "stylesheet" type= "text/css" href = "./singlemed.css" th:href= "@{css/singlemed.css}">
 </head>
 <body>
-	<h1>Medication</h1>
-	
-	
-	<div th:each= "medication: ${medications}">		
-		 
-		<p th:text = "${medication.medicationName}"></p>
+<header><img th:src="@{/images/medcabsubpage.png}"  class= "center"/> </header>
+	<main>
+	<section id = "medicationTitle">
+	<h1>Medication</h1>	
+	<div th:each= "medication: ${medications}">			 
+		<p th:text = "${medication.medicationName}"></p>	
 		<p th:text = "${medication.dosageAmount}"></p>
 		<p th:text = "${medication.dosageUnits}"></p>
 		<p th:text = "${medication.medicationType}"></p>
 		<p th:text = "${medication.frequency}"></p>
 		<p th:text = "${medication.count}"></p>
 		<p th:text = "${medication.timeToTakeMedication}"></p>
-		<p th:text = "${medication.instructions}"></p>
-		
-		
-				
-	</div>		
+		<p th:text = "${medication.instructions}"></p>				
+	</div>
+	</section>		
+	
+	<section id = "medicationDoctorAndPharm">
+	<p>Doctor That Prescribed Medication:</p>
+	
+                <p class="doctors__item" th:each="doctor: ${medications.doctor}">
+                    <a th:href="@{/doctor(id=${doctor.id})}" th:text="${doctor.doctorName}"></a>
+                </p>
+            
+            
+     <p>Pharmacy Associated With This Medication:</p>
+	
+                <p class="pharmacies__item" th:each="pharmacy: ${medications.pharmacy}">
+                    <a th:href="@{/pharmacy(id=${pharmacy.id})}" th:text="${pharmacy.pharmacyName}"></a>
+                </p>
+           
+	</section>
 
 	
-	
-
-	<a href ="http://localhost:8080/show-todays-medications">Back to Today's Medications</a>
-	<a href ="http://localhost:8080/show-medications">Back to All Medications</a>
-	<a href ="http://localhost:8080/home-page">Back to Home</a>
-
+	</main>
 		
 
 </body>
-<footer></footer>
+<footer><a href ="http://localhost:8080/show-todays-medications">Back to Today's Medications</a>
+	<a href ="http://localhost:8080/show-medications">Back to All Medications</a>
+	<a href ="http://localhost:8080/home-page">Back to Home</a></footer>
 <script type="text/javascript" th:src="@{/js/home-page.js}"></script>
 </html>
