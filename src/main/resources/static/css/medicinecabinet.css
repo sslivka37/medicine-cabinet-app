@@ -6,15 +6,28 @@
 	padding: 0;
 }
 
+.center{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 50%;
+}
 h1, h2, h3 {
 	color: darkblue;
 }
 
 header,
 main,
+aside
 footer {
 	margin: 0 auto;
 	max-width: 800px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 html {
