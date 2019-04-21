@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Doctor</title>
+	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+	
+</head>
+<body>
+	<h1>Doctor</h1>
+	
+	
+	<div th:each= "doctor: ${doctors}">		
+		 
+		<p th:text = "${doctor.doctorName}"></p>		
+		<p th:text = "${doctor.doctorPhone}"></p>
+				
+				
+	</div>	
+	
+	<a href ="http://localhost:8080/show-doctors">Back to Doctors</a>
+	<a href ="http://localhost:8080/home-page">Back to Home</a>
+	
+		
+<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+</body>
+</html>
