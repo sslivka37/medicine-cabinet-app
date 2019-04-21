@@ -6,6 +6,9 @@
 	padding: 0;
 }
 
+section{
+border: 5px solid #cc5500;
+}
 
 
 body, html {
@@ -16,25 +19,32 @@ body, html {
   position: absolute; 
   object-fit: contain;
   top: 0; 
-  left: 0; 
-
- 
+  left: 0;  
   max-width: 100%;
-  
-
 }
 
 #welcomeStatement{
-	padding-top: 85%;
+	text-align: center;
+	margin-top: 45em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+	padding-left: .5em;
+	padding-right: .5em;
 }
 
 #medicalDisclaimer{
+	text-align: center;
 	padding-top: 2em;
 	padding-bottom: 2em;
+	padding-left: .5em;
+	padding-right: .5em;
 }
 
 #medResources{
 	padding-top: 2em;
+	padding-bottom: 4em;
+	margin-bottom: 2em;
 }
 
 #resources{
@@ -49,12 +59,13 @@ body, html {
 #resources a{
 	text-decoration: none;
 	color: #ff3f34;
-	padding: 2em;
+	padding: 1.5em;
+	border: 5px solid #ff3f34;
 }
 
 #resources a:hover{
 	color: #fff;
-	background-color: #cc5500;
+	background-color: #3498DB;
 }
 
 
