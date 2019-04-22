@@ -74,6 +74,10 @@ public class Alert {
 		return taken;
 	}
 	
+	public void setDosageUnits(int dosageUnits) {
+		this.dosageUnits = dosageUnits;
+	}
+	
 
 	public int getDosageUnits() {
 		return dosageUnits;
@@ -138,6 +142,13 @@ public class Alert {
 	public void setDayToSendAlert(int dayToSendAlert) {
 		this.dayToSendAlert = dayToSendAlert;
 	}
+
+	public void setDosageType(String dosageType) {
+		this.dosageType = dosageType;
+		
+	}
+
+	
 
 
 	
