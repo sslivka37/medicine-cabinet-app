@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Pharmacy</title>
+	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+	
+</head>
+<body>
+	<h1>Pharmacy</h1>
+	
+	
+	<div th:each= "pharmacy: ${pharmacies}">		
+		 
+		<p th:text = "${pharmacy.pharmacyName}"></p>
+		<p th:text = "${pharmacy.pharmacyAddress}"></p>		
+		<p th:text = "${pharmacy.pharmacyPhone}"></p>
+				
+				
+	</div>	
+	
+	<a href ="http://localhost:8080/show-pharmacies">Back to Pharmacies</a>
+	<a href ="http://localhost:8080/home-page">Back to Home</a>
+	
+		
+<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+</body>
+</html>

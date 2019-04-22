@@ -10,9 +10,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.mail.MailException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.wecancodeit.medicinecabinetapp.base.classes.Alert;
+import org.wecancodeit.medicinecabinetapp.base.classes.Medication;
 import org.wecancodeit.medicinecabinetapp.base.classes.User;
 import org.wecancodeit.medicinecabinetapp.exceptions.AlertNotFoundException;
 import org.wecancodeit.medicinecabinetapp.repositories.AlertRepository;
@@ -25,6 +28,34 @@ public class AlertController {
 
 	@Resource
 	private AlertRepository alertRepo;
+	
+	
+	@PostMapping("/addalert")
+	public String addAlert(String name, int dosageUnits, String dosageType, int dayToSendAlert, int timeToSendAlertHour, int timeToSendAlertMinute) {
+		Alert newAlert = alertRepo.findByName(name);
+		if (newAlert == null) {
+			newAlert = new Alert();
+			newAlert.setAlertName(name);
+			newAlert.setDosageUnits(dosageUnits);
+			newAlert.setDosageType(dosageType);
+			newAlert.setDayToSendAlert(dayToSendAlert);
+			newAlert.setTimeToSendAlertHour(timeToSendAlertHour);
+			newAlert.setTimeToSendAlertMinute(timeToSendAlertMinute);
+			
+			alertRepo.save(newAlert);
+		}
+
+		return "redirect:/show-alerts";
+	
+	
+	}
+	
+	@GetMapping("/add-alert")
+	public String showAddAlertPage() {
+		return "addalert";
+	}
+
+	
 
 	@RequestMapping("/alert")
 	public String findOneAlert(@RequestParam(value = "id") long id, Model model) throws AlertNotFoundException {
@@ -59,10 +90,10 @@ public class AlertController {
 	public String findAllAlerts(Model model) {
 		model.addAttribute("alerts", alertRepo.findAll());
 		return ("alerts");
-
-
+	}
+		
+		
 	
-
-}
+	
 
 }

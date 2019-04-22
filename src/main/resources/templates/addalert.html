@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title >All Alerts</title>
+	<title >Add Alerts</title>
 	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
 </head>
 <body>	
-	<h1>List of All Alerts</h1>
 	
-	
-	<div th:each="alert: ${alerts}" >
-		<p><a th:href="@{/alert(id=${alert.id})}" th:text="${alert.name}"></a></p>
-	</div>
-	
-	
-	
-	<h1>Add an Alert </h1>
+
+
+<h1>Add an Alert </h1>
 	 <form method= "POST" action = "/addalert">
 
 		<div>
@@ -55,8 +49,6 @@
 
 	
 	</form>
-	
-		
 	
 	<a href ="http://localhost:8080/home-page">Back to Home</a>
 	

@@ -73,8 +73,8 @@ public class MedicationController {
 	public String addMedication(String medicationName, String dosageUnits, double dosageAmount, String medicationType,
 			String frequency, String count, String instructions) {
 		// Alert alert = alertRepo.findByName(alertName);
-		// Doctor doctor = doctorRepo.findByName(doctorName);
-		// Pharmacy pharmacy = pharmacyRepo.findByName(pharmacyName);
+		//Doctor doctor = doctorRepo.findByName(doctorName);
+		//Pharmacy pharmacy = pharmacyRepo.findByName(pharmacyName);
 
 		Medication newMedication = medicationRepo.findByName(medicationName);
 		if (newMedication == null) {
@@ -86,7 +86,6 @@ public class MedicationController {
 			newMedication.setFrequency(frequency);
 			newMedication.setCount(count);
 			newMedication.setInstructions(instructions);
-
 			medicationRepo.save(newMedication);
 		}
 
