@@ -2,13 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title >Add Alerts</title>
-	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+	<link rel= "stylesheet" type= "text/css" href = "./addAlert.css" th:href= "@{css/addAlert.css}">
 </head>
 <body>	
-	
+	<header>
+		<img th:src="@{/images/medcabsubpage.png}"  class= "center"/> 
+	</header>
+	<main>
 
-
-<h1>Add an Alert </h1>
+	<section id= "addAlertTitle">
+    <h1>Add an Alert </h1>
 	 <form method= "POST" action = "/addalert">
 
 		<div>
@@ -49,11 +52,15 @@
 
 	
 	</form>
+</section>
+</main>
 	
-	<a href ="http://localhost:8080/home-page">Back to Home</a>
 	
-
-<footer></footer>
-<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+	
 </body>
+<footer>
+	<a href ="http://localhost:8080/home-page">Back to Home</a>
+</footer>
+<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+
 </html>
