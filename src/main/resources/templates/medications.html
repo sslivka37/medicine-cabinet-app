@@ -9,6 +9,8 @@
 	
 </head>
 <body>	
+	<p id="addMed"><a href ="http://localhost:8080/add-medication">Add A Medication</a></p>
+
 	<h1>List of All Active Medications</h1>
 	
 	
@@ -16,105 +18,11 @@
 		<p><a th:href="@{/medication(id=${medication.id})}" th:text="${medication.medicationName}"></a></p>
 	</div>
 	
-	<h1>Add a Medication to the List of Active Medications</h1>
-	 <form method= "POST" action = "/addmedication">
-
-		<div>
-		<label>Enter Medication Name:</label>
-		<input type="text" name="medicationName" />
-		</div>
-		
-		<div>
-		<label>Enter Dosage Units:</label>
-		<input type="text" name="dosageUnits" placeholder="mL, mg, teaspoon, .ect" />
-		</div>
-		
-		<div>
-		<label>Enter Dosage Amount:</label>
-		<input type="text" name="dosageAmount" />
-		</div>
-		
-		<div>
-		<label>Enter Medication Type:</label>
-		<select name="medicationType">
-			<option value="Liquid">Liquid</option>
-			<option value="Pill">Pill</option>
-			<option value="Injection">Injection</option>
-			<option value="Patch">Patch</option>
-			<option value="Ointment">Ointment</option>
-			<option value="Lotion">Lotion</option>
-			<option value="Cream"></option>
-		</select>
-		</div>
-
-		<div>
-		<label>Enter Frequency:</label>
-		<select name="frequency">
-			<option value="Daily">Daily</option>
-			<option value="Every 4 Hours">Every 4 Hours</option>
-			<option value ="Every 8 Hours">Every 8 Hours</option>
-			<option value ="Every 12 Hours">Every 12 Hours</option>
-			<option value="Weekly on Monday">Weekly Monday</option>
-			<option value="Weekly on Tuesday">Weekly Tuesday</option>
-			<option value="Weekly on Wednesday">Weekly Wednesday</option>
-			<option value="Weekly on Thursday">Weekly Thursday</option>
-			<option value="Weekly on Friday">Weekly Friday</option>
-			<option value="Weekly on Saturday">Weekly Saturday</option>
-			<option value="Weekly on Sunday">Weekly Sunday</option>
-			<option value="Monthly">Monthly</option>
-		</select>
-		</div>
-		
-		<div>
-
-		<label>Enter Medication Count:</label>
-		<input type="text" name="medicationType" placeholder="ex: Until next refil" />
-		</div>
-		
-		<!-- <div>
-		<label>Enter Time To Take Medication:</label>
-		<input type="text" name="timeToTakeMedication" placeholder="13:30 " />
-		</div>-->
-
-		
-		<div>
-		<label>Enter Special Instructions:</label>
-		<input type="text" name="instructions" placeholder="ex: Take with food" />
-		</div>
-		
-
-
-		<!--<div>
-		<label>Enter Prescribing Doctor:</label>
-		<input type="text" name="doctorName" />
-		</div>
-
-		
-		<div>
-		<label>Enter Pharmacy:</label>
-		<input type="text" name="pharmacyName" />
-		
-
-
-		</div>
-		
-		<!--  <div>
-		<label>Enter Alert:</label>
-		<input type="text" name="alertName" />
-		</div>-->
-		
-			
-
-		
-		<div>
-		<button type="submit">Add Medication</button>
-
-		</div>
-
 	
-	</form>
 	
-	<a href ="http://localhost:8080/home-page">Back to Home</a>
+	
+	<footer><a href ="http://localhost:8080/home-page">Back to Home</a>
+	<a href ="http://localhost:8080/add-medication">Add A Medication</a></footer>
 	<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
 </body>
 </html>

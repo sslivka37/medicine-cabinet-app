@@ -55,7 +55,24 @@ footer a:hover{
 	background-color: #3498DB;
 }
 
+#addAlertButton{
+	margin-top: 25em;
+	text-align: center;
+}
+
+#addAlertButton a{
+	text-decoration: none;
+	color: #ff3f34;
+	padding: 1.5em;
+	border: 5px solid #ff3f34;
+}
+
+#addAlertButton a:hover{
+	color: #fff;
+	background-color: #3498DB;
+}
+
 #alertsTitle{
-	margin-top: 24em;
+	margin-top: 5em;
 	text-align: center;
 }
