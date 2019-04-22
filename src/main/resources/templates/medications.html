@@ -5,21 +5,28 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title >All Active Medications</title>
-	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+	<link rel= "stylesheet" type= "text/css" href = "../static/css/viewmedications.css" th:href= "@{css/viewmedications.css}">
 	
 </head>
 <body>	
-	<h1>List of All Active Medications</h1>
-	
-	
-	<div th:each="medication: ${medications}" >
+	<header>
+		<img th:src="@{/images/medcabsubpage.png}" class= "center"/>  
+	</header>
+	<section>
+	<main class="main">
+		<div class="activemedicationtitle">
+			<h1>Active Medications</h1>
+</div>
+	<div  th:each="medication: ${medications}" >
 		<p><a th:href="@{/medication(id=${medication.id})}" th:text="${medication.medicationName}"></a></p>
 	</div>
-	
-	<h1>Add a Medication to the List of Active Medications</h1>
+</section>
+	<section  class="addmedicationform">
+	<h1>Add a Medication</h1>
 	 <form method= "POST" action = "/addmedication">
 
 		<div>
+			<div>
 		<label>Enter Medication Name:</label>
 		<input type="text" name="medicationName" />
 		</div>
@@ -82,13 +89,13 @@
 		<input type="text" name="instructions" placeholder="ex: Take with food" />
 		</div>
 		
-
+</div>
+</form>
 
 		<!--  <div>
 		<label>Enter Prescribing Doctor:</label>
 		<input type="text" name="doctorName" />
 		</div>
-
 		
 		<div>
 		<label>Enter Pharmacy:</label>
@@ -103,20 +110,18 @@
 		<input type="text" name="alertName" />
 		</div>-->
 		
-		<div>
-		<button type="submit"> add medication</button>
-		</div>		
-
 		
 		<div>
 		<button type="submit">Add Medication</button>
 
 		</div>
-
+</section>
 	
 	</form>
-	
+	</main>
+	<footer>
 	<a href ="http://localhost:8080/home-page">Back to Home</a>
+</footer>
 	<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
 </body>
 </html>
