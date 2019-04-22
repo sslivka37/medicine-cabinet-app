@@ -3,10 +3,16 @@
 
 <head>
 	<title>Alert</title>
-	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+	<link rel= "stylesheet" type= "text/css" href = "./alert.css" th:href= "@{css/alert.css}">
 	
 </head>
 <body>
+	<header>
+		<img th:src="@{/images/medcabsubpage.png}"  class= "center"/> 
+	</header>
+
+<main>
+	<section id= "alertTitle">
 	<h1>Alert</h1>
 	
 	
@@ -16,12 +22,16 @@
 		<p th:text = "${alert.dosageUnits}"></p>
 		<p th:text = "${alert.dosageType}"></p>			
 				
-	</div>	
-	
-	<a href ="http://localhost:8080/show-alerts">Back to Alerts</a>
-	<a href ="http://localhost:8080/home-page">Back to Home</a>
-	
-		
-<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+	</div>
+	</section>
+</main>	
 </body>
+
+	<footer>
+		<a href ="http://localhost:8080/show-alerts">Back to Alerts</a>
+		<a href ="http://localhost:8080/home-page">Back to Home</a>
+	</footer>
+			
+	<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+
 </html>
