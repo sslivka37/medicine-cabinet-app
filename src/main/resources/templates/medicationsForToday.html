@@ -6,17 +6,26 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="./medicinecabinet.css"
+      href="./medicationForToday.css"
       th:href="@{css/medicinecabinet.css}"
     />
     <link
       rel="stylesheet"
       type="text/css"
       href="./viewmedications.css"
-      th:href="@{css/viewmedications.css}"
+      th:href="@{css/medicationForToday.css}"
     />
   </head>
   <body>
+
+    <header>
+    <img th:src="@{/images/medcabsubpage.png}"  class= "center"/> 
+    </header>
+
+    <main>
+
+
+    <section id= "medicationsDueTitle">
     <h1>List of Medications Due Today</h1>
 
 
@@ -34,16 +43,16 @@
       <p th:class="frequencyCheck" th:text="${medication.frequency}"></p>
       <p th:class="timeCheck" th:text="${medication.timeToTakeMedication}"></p>
     </div>
+  </section>
+</main>
 
-    <p>
-      <a href="http://localhost:8080/show-medications">Back to All Medications</a>
-    </p>
-    <p><a href="http://localhost:8080/home-page">Back to Home</a></p>
-
-
+   
     <script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
-  <footer></footer>
+  <footer>
+    <a href="http://localhost:8080/show-medications">Back to All Medications</a>
+    <a href="http://localhost:8080/home-page">Back to Home</a>
+  </footer>
 </html>
 
