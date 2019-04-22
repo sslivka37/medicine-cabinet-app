@@ -3,10 +3,17 @@
 
 <head>
 	<title>Pharmacy</title>
-	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+</head>
+<body>
+	<link rel= "stylesheet" type= "text/css" href = "./pharmacy.css" th:href= "@{css/pharmacy.css}">
 	
 </head>
 <body>
+	<header><img th:src="@{/images/medcabsubpage.png}"  class= "center"/> </header>
+
+<main>
+
+	<section id = "pharmacyTitle">
 	<h1>Pharmacy</h1>
 	
 	
@@ -15,14 +22,19 @@
 		<p th:text = "${pharmacy.pharmacyName}"></p>
 		<p th:text = "${pharmacy.pharmacyAddress}"></p>		
 		<p th:text = "${pharmacy.pharmacyPhone}"></p>
-				
-				
+
 	</div>	
-	
+</section>
+</main>
+
+</body>
+
+<footer>
 	<a href ="http://localhost:8080/show-pharmacies">Back to Pharmacies</a>
 	<a href ="http://localhost:8080/home-page">Back to Home</a>
-	
+</footer>
 		
 <script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
-</body>
+
+
 </html>

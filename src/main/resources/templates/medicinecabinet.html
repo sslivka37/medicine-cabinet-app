@@ -8,8 +8,13 @@
 </head>
 
 <body>
+
+	
+<header>
+    <h1>Medicine Cabinet</h1>
+
 <header> 
-<img th:src="@{/images/medcabheader.png}" class= "center"/>  
+<img th:src="@{/images/medcabheader.png}"  class= "center"/>  
 
  
 
@@ -22,6 +27,7 @@
 			<div id="welcome">
 				<article>
 					<p>Welcome to MedCab! Here you can enter all of your medications to help you keep track of all of the important details. The app allows you to enter the Doctor and Pharmacy for a particular medication. In addition it also tracks the dosage details and allows you to set up email alerts to help remind you to take your medications. </p>
+
 				</article>
 			</div>
 		</section>
@@ -50,31 +56,7 @@
 			</div>
 		</section>
 
-		<section id="medResources">
-			<h2>Resources</h2>
-			<p></p>
-			<div id="resources">
-				<article>
-					<h3>
-						<a href="https://www.fda.gov/">FDA</a>
-					</h3>
-				</article>
-
-				<article>
-					<h3>
-						<a href="https://www.cdc.gov/">CDC</a>
-					</h3>
-				</article>
-
-				<article>
-					<h3>
-						<a href="https://www.aapcc.org/">Posion Control</a>
-					</h3>
-				</article>
-			</div>
-		</section>
-	
-	
+		
 </main>
 <aside>
 <nav>
@@ -87,6 +69,7 @@
 				<a href="http://localhost:8080/show-doctors">View Your Doctors</a>
 				<a href="http://localhost:8080/show-pharmacies">View Your Pharmacies</a>
 				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="#medResources">External Resources</a>
 				<a href="#medicalDisclaimer">Disclaimer</a>
 			</div>
 	</div>	
@@ -104,6 +87,7 @@
 		</div>
 		</section>
 	</footer>
+
 	  <script type="text/javascript" th:src="@{/js/home-page.js}"></script>
 
 </body>

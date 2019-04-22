@@ -1,33 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-	<title >All Alerts</title>
-	<link rel= "stylesheet" type= "text/css" href = "./alerts.css" th:href= "@{css/alerts.css}">
+	<title >Add Alerts</title>
+	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
 </head>
-
 <body>	
-
-	<header>
-		<img th:src="@{/images/medcabsubpage.png}"  class= "center"/> 
-	</header>
-
-<main>
-
-	<section id= "alertsTitle">
-	<h1>List of All Alerts</h1>
-	
-	<div th:each="alert: ${alerts}" >
-		<p><a th:href="@{/alert(id=${alert.id})}" th:text="${alert.name}"></a></p>
-	</div>
-	</section>
-</main>
-	
 	
 
-	
-	
-	<h1>Add an Alert </h1>
+
+<h1>Add an Alert </h1>
 	 <form method= "POST" action = "/addalert">
 
 		<div>
@@ -69,14 +50,10 @@
 	
 	</form>
 	
-		
+	<a href ="http://localhost:8080/home-page">Back to Home</a>
 	
 
-	
+<footer></footer>
+<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
 </body>
-	<footer>
-		<a href ="http://localhost:8080/home-page">Back to Home</a>
-	</footer>
-	<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
-
 </html>
