@@ -27,7 +27,7 @@ public class EmailService {
         mail.setTo(user.getUserEmail());
         mail.setFrom("yourmedcabapp@gmail.com");
         mail.setSubject("Time to take your meds");
-        mail.setText("Hi this is a med notification");
+        mail.setText("Hi! This is a reminder from MedCab that you have a scheduled medication to be taken.");
         
         javaMailSender.send(mail);
         

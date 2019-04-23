@@ -16,38 +16,38 @@
 
 	 <form method= "POST" action = "/addalert">
 
-		<div>
+		<div class = "alertForm">
 		<label>Enter the Medication For This Alert:</label>
 		<input type="text" name="name" />
 		</div>
 		
-		<div>
+		<div class = "alertForm">
 		<label>Enter Dosage Units:</label>
 		<input type="text" name="dosageUnits" placeholder="1, 100, 30 etc" />
 		</div>
 		
-		<div>
+		<div class = "alertForm">
 		<label>Enter Dosage Type:</label>
 		<input type="text" name="dosageType" placeholder ="pill, liquid, patch, injection" />
 		</div>
 		
-		<div>
-		<label>Enter Day To Send Alert As A Single Digit:</label>
-		<input type="text" name="dayToSendAlert" placeholder ="Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, etc."/>
+		<div class = "alertForm">
+		<label>Enter Day To Send Alert:</label>
+		<input type="text" name="dayToSendAlert" placeholder ="Sunday = 0, Monday = 1, etc."/>
 		</div>
 		
-		<div>
-		<label>Enter The Hour (in Military Time) To Send Alert:</label>
-		<input type="text" name="timeToSendAlertHour" />
-		</div>
+		<div class = "alertForm">
+		<label>Enter Alert Hour:</label>
+		<input type="text" name="timeToSendAlertHour" placeholder ="Military Time" />
 		
-		<div>
-		<label>Enter The Minute To Send Alert:</label>
+		
+		
+		<label id = "minute">Enter Alert Minute:</label>
 		<input type="text" name="timeToSendAlertMinute" />
 		</div>
 		
 		
-			<div>
+		<div id= "addAlertBtn">	
 		<button type="submit">Add Alert</button>
 
 		</div>
@@ -57,13 +57,27 @@
 	 </section>
 </main>
 
+<div class="dropdowm">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class= "dropdown-content">
+				<a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
+				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
+				<a href="http://localhost:8080/show-alerts">View Alerts</a>
+				<a href="http://localhost:8080/show-doctors">View Your Doctors</a>
+				<a href="http://localhost:8080/show-pharmacies">View Your Pharmacies</a>
+				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="http://localhost:8080/add-alert">Add Alerts</a>
+				<a href="http://localhost:8080/home-page">Home Page</a>
+			</div>
+	</div>		
 	
 	
-	
-</body>
+
 <footer>
 	<a href ="http://localhost:8080/home-page">Back to Home</a>
 </footer>
-<script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+<script type="text/javascript" th:src="@{/js/home-page.js}"></script>
+</body>
+
 
 </html>

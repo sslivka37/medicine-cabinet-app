@@ -17,9 +17,11 @@
 	
 	
 	<div th:each= "alert: ${alerts}">		
-		 
-		<p th:text = "${alert.name}"></p>		
+		 <p>Name:</p>
+		<p th:text = "${alert.name}"></p>
+		<p>Amount: </p>		
 		<p th:text = "${alert.dosageUnits}"></p>
+		<p>Type:</p>
 		<p th:text = "${alert.dosageType}"></p>			
 				
 	</div>

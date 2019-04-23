@@ -57,7 +57,7 @@ System.out.println("foo");
 					User user = new User();
 					user.setFirstName("Sally");
 					user.setLastName("Sue");
-					user.setUserEmail("anicgarr@gmail.com");
+					user.setUserEmail("sallysue966@gmail.com");
 
 					try {
 						EmailService.sendEmailAlert(user);

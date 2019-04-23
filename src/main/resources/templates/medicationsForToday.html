@@ -34,11 +34,11 @@
       th:id="eachMedicationForToday"
       th:each="medication: ${medications}"
     >
-      <p class="eachMed">
+      <strong><p class="eachMed">
         <a
           th:href="@{/medication(id=${medication.id})}"
           th:text="${medication.medicationName}"
-        ></a>
+        ></a></strong>
       </p>
       <p th:class="frequencyCheck" th:text="${medication.frequency}"></p>
       <p th:class="timeCheck" th:text="${medication.timeToTakeMedication}"></p>
@@ -46,8 +46,25 @@
   </section>
 </main>
 
+<nav>
+	<div class="dropdowm">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class= "dropdown-content">
+				<a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
+				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
+				<a href="http://localhost:8080/show-alerts">View Alerts</a>
+				<a href="http://localhost:8080/show-doctors">View Your Doctors</a>
+				<a href="http://localhost:8080/show-pharmacies">View Your Pharmacies</a>
+				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="http://localhost:8080/add-alert">Add Alerts</a>
+				<a href="http://localhost:8080/home-page">Home Page</a>
+			</div>
+	</div>	
+</nav>
+
    
     <script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+     <script type="text/javascript" th:src="@{/js/home-page.js}"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
   <footer>
