@@ -21,13 +21,12 @@
 		<strong><p>Medication Type:</p></strong>
 		<p th:text = "${medication.medicationType}"></p>
 		<strong><p>Frequency:</p></strong>
-		<p th:text = "${medication.frequency}"></p>
-		<strong><p>Original Count:</p></strong>
-		<p th:text = "${medication.count}"></p>
-		<strong><p>Time to Take Medication:</p></strong>
+		<p th:text = "${medication.frequency}"></p>		
 		<p th:text = "${medication.timeToTakeMedication}"></p>
 		<strong><p>Special Instructions:</p></strong>
-		<p th:text = "${medication.instructions}"></p>				
+		<p th:text = "${medication.instructions}"></p>
+		<strong><p>Count:</p></strong>
+		<p th:text = "${medication.count}"></p>					
 	</div>
 	</section>		
 	
@@ -35,14 +34,14 @@
 	<p>Doctor That Prescribed Medication:</p>
 	
                 <p class="doctors__item" th:each="doctor: ${medications.doctor}">
-                    <a th:href="@{/doctor(id=${doctor.id})}" th:text="${doctor.doctorName}"></a>
+                   <strong> <a th:href="@{/doctor(id=${doctor.id})}" th:text="${doctor.doctorName}"></a></strong>
                 </p>
             
             
      <p>Pharmacy Associated With This Medication:</p>
 	
                 <p class="pharmacies__item" th:each="pharmacy: ${medications.pharmacy}">
-                    <a th:href="@{/pharmacy(id=${pharmacy.id})}" th:text="${pharmacy.pharmacyName}"></a>
+                  <strong> <a th:href="@{/pharmacy(id=${pharmacy.id})}" th:text="${pharmacy.pharmacyName}"></a></strong> 
                 </p>
            
 	</section>
