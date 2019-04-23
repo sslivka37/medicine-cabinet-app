@@ -6,6 +6,15 @@
 	padding: 0;
 }
 
+body{
+	 height: 100%;
+    margin-top : 0;
+	background: linear-gradient(to top, #fff 0%,  #f27d2e 75% );
+	 background-repeat: no-repeat;	   
+    background-attachment: fixed;  
+    
+}
+
 html {
 	font-size: 16px;
 
@@ -31,6 +40,7 @@ footer {
 
 section{
 border: 5px solid #cc5500;
+background-color: #fff;
 }
 
 h1, h2, h3 {
@@ -47,6 +57,7 @@ footer a {
 	text-decoration: none;
 	color: #ff3f34;
 	padding: 1.5em;
+	background-color: #fff;
 	border: 5px solid #ff3f34;
 }
 
@@ -146,6 +157,19 @@ nav a:hover {
 }
 
 #addAlertBtn{
+	
 	margin-top: 1em;
 	margin-bottom: 1em;
+}
+
+.addButton{
+	background-color: #3498DB;
+	border-radius: 8px;
+	font-size: 16px;
+	padding: .5em;
+	color: #fff;
+}
+
+.addButton:hover{
+	 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

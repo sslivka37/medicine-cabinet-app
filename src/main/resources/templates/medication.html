@@ -11,14 +11,22 @@
 	<main>
 	<section id = "medicationTitle">
 	<h1>Medication</h1>	
-	<div th:each= "medication: ${medications}">			 
-		<p th:text = "${medication.medicationName}"></p>	
+	<div th:each= "medication: ${medications}">	
+		<strong><p>Name:</p></strong>	 
+		<p th:text = "${medication.medicationName}"></p>
+		<strong><p>Dosage Amount:</p></strong>	
 		<p th:text = "${medication.dosageAmount}"></p>
+		<strong><p>Dosage Units:</p></strong>
 		<p th:text = "${medication.dosageUnits}"></p>
+		<strong><p>Medication Type:</p></strong>
 		<p th:text = "${medication.medicationType}"></p>
+		<strong><p>Frequency:</p></strong>
 		<p th:text = "${medication.frequency}"></p>
+		<strong><p>Original Count:</p></strong>
 		<p th:text = "${medication.count}"></p>
+		<strong><p>Time to Take Medication:</p></strong>
 		<p th:text = "${medication.timeToTakeMedication}"></p>
+		<strong><p>Special Instructions:</p></strong>
 		<p th:text = "${medication.instructions}"></p>				
 	</div>
 	</section>		
@@ -41,11 +49,29 @@
 
 	
 	</main>
+	
+	<nav>
+	<div class="dropdowm">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class= "dropdown-content">
+				<a href="http://localhost:8080/home-page">Home Page</a>
+				<a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
+				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
+				<a href="http://localhost:8080/show-alerts">View Alerts</a>
+				<a href="http://localhost:8080/show-doctors">View Your Doctors</a>
+				<a href="http://localhost:8080/show-pharmacies">View Your Pharmacies</a>
+				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="http://localhost:8080/add-alert">Add Alerts</a>
+				
+			</div>
+	</div>	
+</nav>
 		
-
-</body>
 <footer><a href ="http://localhost:8080/show-todays-medications">Back to Today's Medications</a>
 	<a href ="http://localhost:8080/show-medications">Back to All Medications</a>
 	<a href ="http://localhost:8080/home-page">Back to Home</a></footer>
+
+</body>
+
 <script type="text/javascript" th:src="@{/js/home-page.js}"></script>
 </html>

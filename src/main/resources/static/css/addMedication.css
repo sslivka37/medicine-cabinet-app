@@ -6,6 +6,15 @@
 	padding: 0;
 }
 
+body{
+	 height: 100%;
+    margin-top : 0;
+	background: linear-gradient(to top, #fff 0%,  #f27d2e 75% );
+	 background-repeat: no-repeat;	   
+    background-attachment: fixed;  
+    
+}
+
 html {
 	font-size: 16px;
 
@@ -31,6 +40,7 @@ footer {
 
 section{
 border: 5px solid #cc5500;
+background-color: #fff;
 }
 
 h1, h2, h3 {
@@ -47,6 +57,7 @@ footer a {
 	text-decoration: none;
 	color: #ff3f34;
 	padding: 1.5em;
+	background-color: #fff;
 	border: 5px solid #ff3f34;
 }
 
@@ -55,7 +66,105 @@ footer a:hover{
 	background-color: #3498DB;
 }
 
+nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+
+	display: flex;
+	flex-flow: row;
+	justify-content: left;
+
+	background: darkblue;
+}
+
+nav a {
+	padding: .5em 2em;
+	text-decoration: none;
+	color:#fff;
+}
+
+nav a:hover {
+	background: lightblue;
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  height: 3em;
+  width: 5em;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transition-timing-function: ease-in;
+  transition: background-color .5s, width .5s;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+  width: 8em;
+}
+
+
+.dropdown {
+  height: 3em;
+  background-color: darkblue;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd}
+
+
+.show {display:block;}
+
+
 #addNewMedicationTitle{
-	margin-top: 24em;
+	margin-top: 8em;
 	text-align: center;
+}
+
+.addMedForm{
+	margin-top: 1em;
+}
+
+.addMedBtn{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.addButton{
+	background-color: #3498DB;
+	border-radius: 8px;
+	font-size: 16px;
+	padding: .5em;
+	color: #fff;
+}
+
+.addButton:hover{
+	 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

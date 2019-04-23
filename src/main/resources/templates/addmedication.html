@@ -17,22 +17,22 @@
 
 
 <form method= "POST" action = "/addmedication">
-		<div>
+		<div class = "addMedForm">
 		<label>Enter Medication Name:</label>
 		<input type="text" name="medicationName" />
 		</div>
 		
-		<div>
+		<div class = "addMedForm">
 		<label>Enter Dosage Units:</label>
 		<input type="text" name="dosageUnits" placeholder="mL, mg, teaspoon, .ect" />
 		</div>
 		
-		<div>
+		<div class = "addMedForm">
 		<label>Enter Dosage Amount:</label>
 		<input type="text" name="dosageAmount" />
 		</div>
 		
-		<div>
+		<div class = "addMedForm">
 		<label>Enter Medication Type:</label>
 		<select name="medicationType">
 			<option value="Liquid">Liquid</option>
@@ -45,7 +45,7 @@
 		</select>
 		</div>
 			
-		<div>
+		<div class = "addMedForm">
 		<label>Enter Frequency:</label>
 		<select name="frequency">
 			<option value="Daily">Daily</option>
@@ -63,7 +63,7 @@
 		</select>
 		</div>
 		
-		<div>
+		<div class = "addMedForm">
 		<label>Enter Medication Count:</label>
 		<input type="text" name="medicationType" placeholder="ex: Until next refil" />
 		</div>
@@ -74,7 +74,7 @@
 		</div>-->
 
 		
-		<div>
+		<div class = "addMedForm">
 		<label>Enter Special Instructions:</label>
 		<input type="text" name="instructions" placeholder="ex: Take with food" />
 		</div>
@@ -107,19 +107,38 @@
 
 		</div>-->
 		
-		<div>
-		<button type="submit">Add Medication</button>
-
+		<div class = "addMedBtn">
+		<button type="submit" class = "addButton">Add Medication</button>
 		</div>
 	
 	</form>
 </section>
 </main>
+
+<nav>
+	<div class="dropdowm">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class= "dropdown-content">
+				<a href="http://localhost:8080/home-page">Home Page</a>
+				<a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
+				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
+				<a href="http://localhost:8080/show-alerts">View Alerts</a>
+				<a href="http://localhost:8080/show-doctors">View Your Doctors</a>
+				<a href="http://localhost:8080/show-pharmacies">View Your Pharmacies</a>
+				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="http://localhost:8080/add-alert">Add Alerts</a>
+				
+			</div>
+	</div>	
+</nav>
 	
-	</body>
 	<footer>
 		<a href ="http://localhost:8080/home-page">Back to Home</a>
 	</footer>
-	  <script type="text/javascript" th:src="@{/js/medicinecabinet.js}"></script>
+	
+	<script type="text/javascript" th:src="@{/js/home-page.js}"></script>
+	</body>
+	
+	  
 
 </html>

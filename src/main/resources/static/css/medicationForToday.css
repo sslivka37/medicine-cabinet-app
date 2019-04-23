@@ -6,6 +6,15 @@
 	padding: 0;
 }
 
+body{
+	 height: 100%;
+    margin-top : 0;
+	background: linear-gradient(to top, #fff 0%,  #f27d2e 75% );
+	 background-repeat: no-repeat;	   
+    background-attachment: fixed;  
+    
+}
+
 html {
 	font-size: 16px;
 
@@ -31,6 +40,7 @@ footer {
 
 section{
 border: 5px solid #cc5500;
+background-color: #fff;
 }
 
 h1, h2, h3 {
@@ -47,6 +57,7 @@ footer a {
 	text-decoration: none;
 	color: #ff3f34;
 	padding: 1.5em;
+	background-color: #fff;
 	border: 5px solid #ff3f34;
 }
 
@@ -133,7 +144,7 @@ nav a:hover {
 
 
 #medicationsDueTitle{
-	margin-top: 8em;
+	margin-top: 4em;
 	text-align: center;
 }
 
