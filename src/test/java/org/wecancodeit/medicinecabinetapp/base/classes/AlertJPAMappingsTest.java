@@ -1,5 +1,6 @@
 package org.wecancodeit.medicinecabinetapp.base.classes;
 
+import java.time.LocalTime;
 import java.util.Optional;
 
 import javax.annotation.Resource;
@@ -12,7 +13,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.wecancodeit.medicinecabinetapp.base.classes.Alert;
 import org.wecancodeit.medicinecabinetapp.base.classes.Medication;
 import org.wecancodeit.medicinecabinetapp.repositories.AlertRepository;
+import org.wecancodeit.medicinecabinetapp.repositories.DoctorRepository;
 import org.wecancodeit.medicinecabinetapp.repositories.MedicationRepository;
+import org.wecancodeit.medicinecabinetapp.repositories.PharmacyRepository;
 import org.wecancodeit.medicinecabinetapp.repositories.UserRepository;
 
 
@@ -37,11 +40,17 @@ public class AlertJPAMappingsTest {
 	@Resource
 	private MedicationRepository medicationRepo;
 	
+	@Resource
+	private DoctorRepository doctorRepo;
+	
+	@Resource
+	private PharmacyRepository pharmacyRepo;
+	
 	
 	
 	@Test
 	public void should_Save_And_Load_Alert(){
-		Alert alert = alertRepo.save(new Alert("alert", false, 1, "pill", null));
+		Alert alert = alertRepo.save(new Alert("alert", false, 1, "pill", 2, 4, 40));
 		long alertId = alert.getId();
 		
 		entityManager.flush();
@@ -55,7 +64,7 @@ public class AlertJPAMappingsTest {
 	
 	@Test
 	public void should_Generate_Alert_Id() {
-		Alert alert = alertRepo.save(new Alert("alert", false, 1, "pill", null));
+		Alert alert = alertRepo.save(new Alert("alert", false, 1, "pill", 2, 4, 40));
 		long alertId = alert.getId();
 		
 		entityManager.flush();
@@ -67,10 +76,15 @@ public class AlertJPAMappingsTest {
 	
 	@Test
 	public void should_Establish_Alert_To_Medication_Relationship() {
-		Alert alert1 = alertRepo.save(new Alert("alert", false, 1, "pill", null));
-		Alert alert2 = alertRepo.save(new Alert("alert", false, 1, "pill", null));
+		Doctor doctor = doctorRepo.save(new Doctor("doc name", "doc phone"));
+		Pharmacy pharmacy = pharmacyRepo.save(new Pharmacy("pharmacy", "address", "phone"));
+
+		LocalTime timeToSendAlert = LocalTime.NOON;
 		
-		Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", 0, 0, alert1, alert2));
+		Alert alert1 = alertRepo.save(new Alert("alert", false, 1, "pill", 2, 4, 40));
+		Alert alert2 = alertRepo.save(new Alert("alert", false, 1, "pill", 2, 4, 40));
+		
+		Medication medication = medicationRepo.save(new Medication("med1", "mL", 1.1, "pill", "daily", "0", timeToSendAlert,"instructions",doctor, pharmacy, alert1, alert2));
 		long medicationId = medication.getId();
 		
 	

@@ -3,22 +3,59 @@
 
 <head>
 	<title>Alert</title>
+	<link rel= "stylesheet" type= "text/css" href = "./alert.css" th:href= "@{css/alert.css}">
 	
 </head>
 <body>
+	<header>
+		<img th:src="@{/images/medcabsubpage.png}"  class= "center"/> 
+	</header>
+
+<main>
+	<section id= "alertTitle">
 	<h1>Alert</h1>
 	
 	
 	<div th:each= "alert: ${alerts}">		
-		 
+		<strong> <p>Name:</p></strong>
 		<p th:text = "${alert.name}"></p>
-		<p th:text = "${alert.timeToSendAlert}"></p>
+		<strong><p>Amount: </p></strong>		
 		<p th:text = "${alert.dosageUnits}"></p>
-		<p th:text = "${alert.dosageType}"></p>
-		
+		<strong><p>Type:</p></strong>
+		<p th:text = "${alert.dosageType}"></p>			
 				
-	</div>		
-		
+	</div>
+	</section>
+</main>	
+
+<nav>
+	<div class="dropdowm">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class= "dropdown-content">
+				<a href="http://localhost:8080/home-page">Home Page</a>
+				<a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
+				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
+				<a href="http://localhost:8080/show-alerts">View Alerts</a>
+				<a href="http://localhost:8080/show-doctors">View Your Doctors</a>
+				<a href="http://localhost:8080/show-pharmacies">View Your Pharmacies</a>
+				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="http://localhost:8080/add-alert">Add Alerts</a>
+				
+			</div>
+	</div>	
+</nav>
+
+	<footer>
+		<a href ="http://localhost:8080/show-alerts">Back to Alerts</a>
+		<a href ="http://localhost:8080/home-page">Back to Home</a>
+	</footer>
+
+<script type="text/javascript" th:src="@{/js/home-page.js}"></script>
 
 </body>
+
+
+			
+	
+
 </html>

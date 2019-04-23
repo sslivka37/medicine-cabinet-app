@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title >All Pharmacies</title>
+	<link rel= "stylesheet" type= "text/css" href = "./pharmacies.css" th:href= "@{css/pharmacies.css}">
+</head>
+<body>	
+	<header><img th:src="@{/images/medcabsubpage.png}"  class= "center"/> </header>
+
+<main>
+
+	<section id = "pharmaciesTitle">
+	<h1>List of All Pharmacies</h1>
+	
+	
+	<div th:each="pharmacy: ${pharmacies}" >
+		<strong><p><a th:href="@{/pharmacy(id=${pharmacy.id})}" th:text="${pharmacy.pharmacyName}"></a></strong></p>
+	</div>
+</section>
+</main>
+
+	<nav>
+	<div class="dropdowm">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class= "dropdown-content">
+				<a href="http://localhost:8080/home-page">Home Page</a>
+				<a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
+				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
+				<a href="http://localhost:8080/show-alerts">View Alerts</a>
+				<a href="http://localhost:8080/show-doctors">View Your Doctors</a>
+				<a href="http://localhost:8080/show-pharmacies">View Your Pharmacies</a>
+				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="http://localhost:8080/add-alert">Add Alerts</a>
+				
+			</div>
+	</div>	
+</nav>
+	
+	
+<script type="text/javascript" th:src="@{/js/home-page.js}"></script>	
+</body>
+<footer><a href ="http://localhost:8080/home-page">Back to Home</a></footer>
+
+
+</html>

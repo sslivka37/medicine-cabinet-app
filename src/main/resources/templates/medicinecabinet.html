@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+	<title>Medicine Cabinet</title>
+	<link rel= "stylesheet" type= "text/css" href = "./medicinecabinet.css" th:href= "@{css/medicinecabinet.css}">
+
+</head>
+
+<body>
+
+	
+<header>
+    <h1>Medicine Cabinet</h1>
+
+<header> 
+<img th:src="@{/images/medcabheader.png}"  class= "center"/>  
+
+ 
+
+    <span></span>
+</header>
+<main>
+
+
+    
+ 
+	<section id="welcomeStatement">
+			<h2>Welcome</h2>
+			<div id="welcome">
+				<article>
+					<p>Welcome to MedCab! Here you can enter all of your medications to help you keep track of all of the important details. In addition it also tracks the dosage details and allows you to set up email alerts to help remind you to take your medications. </p>
+				</article>
+			</div>
+		</section>
+		
+
+		
+		<section id="medResources">
+			<h2>External Resources</h2>
+			<p></p>
+			<div id="resources">
+				<article>
+					<h3>
+						<a href="https://www.fda.gov/">FDA</a>
+					</h3>
+				</article>
+				
+				<article>
+					<h3>
+						<a href="https://www.aapcc.org/">Poison Control</a>
+					</h3>
+				</article>
+
+				<article>
+					<h3>
+						<a href="https://www.cdc.gov/">CDC</a>
+					</h3>
+				</article>
+
+				
+			</div>
+		</section>
+
+		
+</main>
+
+<nav>
+	<div class="dropdowm">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class= "dropdown-content">
+				<a href="#welcomeStatement">Welcome!</a>
+				<a href="http://localhost:8080/show-todays-medications">View Medications For Today</a>
+				<a href="http://localhost:8080/show-medications">View All Active Medications</a>
+				<a href="http://localhost:8080/show-alerts">View Alerts</a>
+				<a href="http://localhost:8080/show-doctors">View Your Doctors</a>
+				<a href="http://localhost:8080/show-pharmacies">View Your Pharmacies</a>
+				<a href="http://localhost:8080/add-medication">Add Medications</a>
+				<a href="http://localhost:8080/add-alert">Add Alerts</a>
+				<a href="#medResources">External Resources</a>
+				<a href="#medicalDisclaimer">Disclaimer</a>
+			</div>
+	</div>	
+</nav>
+
+		
+	<footer>
+		<section id="medicalDisclaimer">
+		<h2>Medical Disclaimer</h2>
+		<div id="disclaimer">
+			<article>
+				<p>All content found on MedCab was created for informational purposes only. This content in not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified medical professional with any questions you may have regarding any medical conditions/medications. This information is not intended to take the place of your medical professional. In the event you experience a medical emergency, call your doctor, go to the emergency department, or call 911 immediately.</p>
+			</article>
+		</div>
+		</section>
+	</footer>
+
+	  <script type="text/javascript" th:src="@{/js/home-page.js}"></script>
+
+</body>
+</html>
