@@ -142,8 +142,36 @@ nav a:hover {
 
 .show {display:block;}
 
-
-#alertTitle{
+#addMed{
 	margin-top: 8em;
 	text-align: center;
+}
+
+#addMed a {
+	
+	text-decoration: none;
+	color: #ff3f34;
+	padding: 1.5em;
+	background-color: #fff;
+	border: 5px solid #ff3f34;
+}
+
+#addMed a:hover{
+	color: #fff;
+	background-color: #3498DB;
+}
+
+#allMedicationsTitle{
+	margin-top: 3em;
+	text-align: center;
+}
+
+#allMedicationsTitle a{
+	text-decoration: none;
+	color: #ff3f34;
+	
+}
+
+#allMedicationsTitle a:hover{
+	color: #3498DB;
 }
